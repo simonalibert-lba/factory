@@ -1,0 +1,3 @@
+# Préproduction : à ouvrir au lancement
+User-agent: *
+Disallow: /
