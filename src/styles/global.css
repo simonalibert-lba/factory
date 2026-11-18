@@ -362,3 +362,11 @@ h1,h2{display:flow-root}
 /* Le fondu du fond blanc de la vidéo se fait sur la scène (la vidéo seule serait isolée par la transformation) */
 .intro-stage{mix-blend-mode:multiply}
 .intro-logo{mix-blend-mode:normal}
+
+/* Références : 2 lignes de 3 sur grand écran, défilement horizontal sur mobile */
+@media (max-width: 900px){
+  .refs{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px!important;margin-inline:calc(-1 * clamp(20px, 7.8vw, 112px));padding-inline:clamp(20px, 7.8vw, 112px);scroll-padding-inline:clamp(20px, 7.8vw, 112px);scrollbar-width:none}
+  .refs::-webkit-scrollbar{display:none}
+  .refs > li{flex:0 0 84%;scroll-snap-align:start}
+}
+.refs:focus-visible{outline:2px solid var(--focus-ring);outline-offset:4px;border-radius:12px}
