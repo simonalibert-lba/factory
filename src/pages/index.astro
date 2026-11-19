@@ -16,417 +16,573 @@ const description = 'LBA Factory conçoit et développe vos applications métier
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#FDFCFC" />
+    <meta name="theme-color" content="#F5F5F5" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <!-- Intro du logo : activée avant le premier affichage, sauf en mouvement réduit -->
     <script is:inline>try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('lbaf-intro')}catch(e){}</script>
   </head>
   <body>
-    <div class="lbaf-root emph-couleur" dir="ltr" lang="fr" style="width: 100%; max-width: 1440px; margin-inline: auto; box-sizing: border-box; background: var(--surface-page); font-family: var(--sans); color: var(--text-primary);">
-      <div class="intro" aria-hidden="true"><div class="intro-stage"><video class="intro-logo" src="/media/logo-anim.mp4" width="960" height="240" muted playsinline autoplay preload="auto" disablepictureinpicture=""></video></div></div>
+    <div class="lbaf-root emph-couleur" dir="ltr" lang="fr" style="width: 100%; max-width: 2400px; margin-inline: auto; box-sizing: border-box; background: var(--surface-page); color: var(--text-primary);">
+  <div class="intro" aria-hidden="true"><div class="intro-stage"><svg class="intro-logo" viewBox="0 0 330 63" width="330" height="63" aria-hidden="true" focusable="false"><g fill="#0A0A0A">
+    <g data-g="l"><path d="M12 40.5842H30.9004V51.2639H0V8.54419H12V40.5842Z"/></g>
+    <g data-g="b"><path d="M53.9521 8.54419C59.1119 8.54425 62.8915 9.56442 65.2314 11.6643C67.5714 13.7643 68.7119 16.3445 68.7119 19.4045C68.7118 23.5443 66.6716 26.724 63.1318 28.344C67.6318 29.964 70.4521 34.2843 70.4521 38.6643C70.4521 46.5242 65.2318 51.2638 54.3721 51.2639H32.7119V8.54419H53.9521ZM44.7119 41.844H53.7119C56.5916 41.8439 58.0311 40.5243 58.0312 37.9446C58.0312 35.3646 56.5918 34.0442 53.7119 34.0442H44.7119V41.844ZM44.7119 25.2239H53.4717C57.7917 25.2239 57.7917 17.9045 53.4717 17.9045H44.7119V25.2239Z"/></g>
+    <g data-g="A"><path d="M107.428 33.4436L101.161 50.9417L99.4658 45.6838H82.7256L80.9258 51.2639H68.6855L83.8662 8.54419H98.2656L107.428 33.4436ZM91.0059 19.1643C90.1059 22.2242 89.4458 24.4446 88.9658 25.9446L85.8457 35.7844H96.2256L93.0459 25.9446C92.1459 23.1246 91.4259 20.9043 91.0059 19.1643Z"/></g>
+    <g data-g="slash"><path d="M112.134 59.808H103.986L125.406 0H133.554L112.134 59.808ZM113.986 51.2639H109.193L111.557 44.6633L113.986 51.2639Z"/></g>
+    <g data-g="f"><path d="M155.994 13.364C154.134 13.364 151.674 14.204 151.674 17.804V21.644H158.454V27.704H151.674V50.864H144.654V27.704H139.554V21.644H144.654V17.624C144.654 11.084 148.854 7.12402 154.854 7.12402C156.594 7.12402 158.034 7.48402 158.514 7.72402V13.664C158.094 13.544 157.314 13.364 155.994 13.364Z"/></g>
+    <g data-g="a"><path d="M160.391 42.944C160.391 37.724 164.231 34.844 169.211 34.124L176.711 32.984C178.391 32.744 178.871 31.904 178.871 30.884C178.871 28.424 177.191 26.444 173.351 26.444C169.691 26.444 167.651 28.784 167.351 31.724L160.991 30.284C161.531 25.244 166.091 20.744 173.291 20.744C182.291 20.744 185.711 25.844 185.711 31.664V46.184C185.711 48.824 186.011 50.564 186.071 50.864H179.591C179.531 50.684 179.291 49.484 179.291 47.144C177.911 49.364 175.031 51.764 170.291 51.764C164.171 51.764 160.391 47.564 160.391 42.944ZM171.611 46.304C175.511 46.304 178.871 44.444 178.871 38.744V37.424L171.251 38.564C169.091 38.924 167.351 40.124 167.351 42.524C167.351 44.504 168.851 46.304 171.611 46.304Z"/></g>
+    <g data-g="c"><path d="M205.465 27.164C201.205 27.164 197.425 30.344 197.425 36.224C197.425 42.104 201.205 45.404 205.585 45.404C210.145 45.404 212.245 42.224 212.905 40.004L219.025 42.224C217.645 46.784 213.265 51.764 205.585 51.764C197.005 51.764 190.465 45.104 190.465 36.224C190.465 27.224 197.005 20.744 205.405 20.744C213.265 20.744 217.585 25.664 218.785 30.344L212.545 32.624C211.885 30.044 209.905 27.164 205.465 27.164Z"/></g>
+    <g data-g="t"><path d="M232.634 12.704V21.644H238.694V27.824H232.634V41.384C232.634 43.964 233.774 45.044 236.354 45.044C237.314 45.044 238.454 44.864 238.754 44.804V50.564C238.334 50.744 237.014 51.224 234.494 51.224C229.094 51.224 225.734 47.984 225.734 42.524V27.824H220.334V21.644H221.834C224.954 21.644 226.334 19.664 226.334 17.084V12.704H232.634Z"/></g>
+    <g data-g="o"><path d="M256.594 45.524C260.914 45.524 264.754 42.344 264.754 36.224C264.754 30.164 260.914 27.044 256.594 27.044C252.334 27.044 248.434 30.164 248.434 36.224C248.434 42.284 252.334 45.524 256.594 45.524ZM256.594 20.744C265.354 20.744 271.774 27.284 271.774 36.224C271.774 45.224 265.354 51.764 256.594 51.764C247.894 51.764 241.474 45.224 241.474 36.224C241.474 27.284 247.894 20.744 256.594 20.744Z"/></g>
+    <g data-g="r"><path d="M293.849 21.464V28.544C293.069 28.424 292.289 28.364 291.569 28.364C286.169 28.364 283.709 31.484 283.709 36.944V50.864H276.749V21.644H283.529V26.324C284.909 23.144 288.149 21.284 291.989 21.284C292.829 21.284 293.549 21.404 293.849 21.464Z"/></g>
+    <g data-g="y"><path d="M307.046 62.684H299.606L306.626 47.384L294.146 21.644H302.006L310.406 40.124L318.266 21.644H325.646L307.046 62.684Z"/></g>
+  </g>
+  <g data-g="dot"><circle cx="324.8" cy="46.33" r="4.9" fill="#FEC300"/></g></svg></div></div>
 
-      <!-- Nav flottante (au défilement) -->
-      <div class="float-nav" inert="" aria-hidden="true">
-        <a class="float-logo" href="#top" aria-label="LBA Factory, accueil"><img src="/media/logo-lba-factory.png" alt="" width="112" height="21"></a>
-        <nav class="float-links" aria-label="Sections">
-          <span class="float-ind" aria-hidden="true"></span>
-          <ul>
-              <li><a href="#solutions" data-target="solutions">Solutions</a></li>
-              <li><a href="#expertises" data-target="expertises">Expertises</a></li>
-              <li><a href="#references" data-target="references">Références</a></li>
-              <li><a href="#agence" data-target="agence">L’agence</a></li>
-              <li><a href="#recrutement" data-target="recrutement">Nous rejoindre</a></li>
-          </ul>
-        </nav>
-        <span class="float-current" aria-hidden="true"></span>
-        <a class="btn btn-accent float-cta" href="#contact"><span class="btn-label">Parler de votre projet</span></a>
-        <button class="btn float-menu" type="button" aria-expanded="false" aria-controls="menu-mobile" data-action="open-menu"><span class="sr">Ouvrir le menu</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
-      </div>
+  <!-- Nav flottante (au défilement) -->
+  <div class="float-nav" inert="" aria-hidden="true">
+    <a class="float-logo" href="#top" aria-label="LBA Factory, accueil"><img src="/media/logo-lba-factory.png" alt="" width="112" height="21"></a>
+    <nav class="float-links" aria-label="Sections">
+      <span class="float-ind" aria-hidden="true"></span>
+      <ul>
+          <li><a href="#solutions" data-target="solutions">Solutions</a></li>
+          <li><a href="#expertises" data-target="expertises">Expertises</a></li>
+          <li><a href="#references" data-target="references">Références</a></li>
+          <li><a href="#agence" data-target="agence">L’agence</a></li>
+          <li><a href="#recrutement" data-target="recrutement">Nous rejoindre</a></li>
+      </ul>
+    </nav>
+    <span class="float-current" aria-hidden="true"></span>
+    <a class="btn btn-accent float-cta" href="#contact"><span class="btn-label" data-label="Parler de votre projet">Parler de votre projet</span></a>
+    <button class="btn float-menu" type="button" aria-expanded="false" aria-controls="menu-mobile" data-action="open-menu"><span class="sr">Ouvrir le menu</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
+  </div>
 
-      <!-- Menu mobile -->
+  <!-- Menu mobile -->
   
-        <div id="menu-mobile" class="m-menu" hidden role="dialog" aria-modal="true" aria-label="Menu">
-          <div class="m-menu-head">
-            <img src="/media/logo-lba-factory.png" alt="" width="128" height="24">
-            <button class="btn m-close" type="button" data-action="close-menu"><span class="btn-label">Fermer</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
-          </div>
-          <nav aria-label="Navigation principale, mobile">
-            <ul class="m-links">
-                <li><a href="#solutions" data-action="close-menu">Solutions</a></li>
-                <li><a href="#expertises" data-action="close-menu">Expertises</a></li>
-                <li><a href="#references" data-action="close-menu">Références</a></li>
-                <li><a href="#agence" data-action="close-menu">L’agence</a></li>
-                <li><a href="#recrutement" data-action="close-menu">Nous rejoindre</a></li>
+    <div id="menu-mobile" class="m-menu" hidden role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="m-menu-head">
+        <img src="/media/logo-lba-factory.png" alt="" width="128" height="24">
+        <button class="btn m-close" type="button" data-action="close-menu"><span class="btn-label" data-label="Fermer">Fermer</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
+      </div>
+      <nav aria-label="Navigation principale, mobile">
+        <ul class="m-links">
+            <li><a href="#solutions" data-action="close-menu">Solutions</a></li>
+            <li><a href="#expertises" data-action="close-menu">Expertises</a></li>
+            <li><a href="#references" data-action="close-menu">Références</a></li>
+            <li><a href="#agence" data-action="close-menu">L’agence</a></li>
+            <li><a href="#recrutement" data-action="close-menu">Nous rejoindre</a></li>
+        </ul>
+      </nav>
+      <div class="m-foot">
+        <ul class="m-langs" aria-label="Langue">
+          <li><a href="#fr" lang="fr" hreflang="fr" aria-current="true">Français</a></li>
+          <li><a href="#en" lang="en" hreflang="en">English</a></li>
+          <li><a href="#ar" lang="ar" hreflang="ar" dir="rtl">العربية</a></li>
+        </ul>
+        <a class="btn btn-accent" href="#contact" data-action="close-menu"><span class="btn-label" data-label="Parler de votre projet">Parler de votre projet</span></a>
+      </div>
+    </div>
+  
+
+  <!-- En-tête -->
+  <div class="site-header on-dark">
+    <div class="wrap">
+      <header style="display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); block-size: 96px;">
+        <a href="#top" aria-label="LBA Factory, accueil" style="display: inline-flex; align-items: center; gap: var(--s-2); min-block-size: 44px; color: inherit; text-decoration: none;">
+          <img src="/media/logo-lba-factory.png" alt="" width="168" height="32" style="display: block; inline-size: 168px; block-size: auto;">
+        </a>
+        <div style="display: flex; align-items: center; gap: var(--s-2);">
+          <nav class="nav" aria-label="Navigation principale">
+            <ul style="display: flex; gap: 4px;">
+              <li><a href="#solutions">Solutions</a></li>
+              <li><a href="#expertises">Expertises</a></li>
+              <li><a href="#references">Références</a></li>
+              <li><a href="#agence">L’agence</a></li>
+              <li><a href="#recrutement">Nous rejoindre</a></li>
             </ul>
           </nav>
-          <div class="m-foot">
-            <ul class="m-langs" aria-label="Langue">
-              <li><a href="#fr" lang="fr" hreflang="fr" aria-current="true">Français</a></li>
-              <li><a href="#en" lang="en" hreflang="en">English</a></li>
-              <li><a href="#ar" lang="ar" hreflang="ar" dir="rtl">العربية</a></li>
-            </ul>
-            <a class="btn btn-accent" href="#contact" data-action="close-menu"><span class="btn-label">Parler de votre projet</span><svg class="flip" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12.5M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+          <div class="lang-wrap" style="position: relative;">
+            <button class="lang-btn" type="button" aria-expanded="false" aria-controls="langues" data-action="toggle-lang"><span class="sr">Langue : </span><span>Français</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+            
+              <ul id="langues" class="lang-list" hidden>
+                <li><a href="#fr" lang="fr" hreflang="fr" aria-current="true"><span>Français</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
+                <li><a href="#en" lang="en" hreflang="en">English</a></li>
+                <li><a href="#ar" lang="ar" hreflang="ar" dir="rtl">العربية</a></li>
+              </ul>
+            
+          </div>
+          <a class="btn btn-accent head-cta" href="#contact" style="block-size: 44px;"><span class="btn-label" data-label="Parler de votre projet">Parler de votre projet</span></a>
+          <button class="btn menu-btn" type="button" aria-expanded="false" aria-controls="menu-mobile" data-action="open-menu"><span class="btn-label" data-label="Menu">Menu</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="on-dark" style="background: var(--surface-page); color: var(--text-inverse);">
+    <div class="wrap">
+
+
+      <main class="grid hero-grid" style="padding-block: var(--s-8) var(--s-section); align-items: flex-end">
+        <div style="grid-column: 1 / span 5; display: flex; flex-direction: column; gap: var(--s-4); justify-content: flex-end">
+          <h1>Agence de développement web et applicatif <span class="hl">au Maroc</span></h1>
+          <p class="t-lead" style="max-width: 40ch; color: var(--text-secondary-inverse);">Depuis 2016, LBA Factory conçoit et développe vos applications métier, sites web et solutions d’IA.</p>
+          <div style="display: flex; gap: var(--s-2); flex-wrap: wrap;">
+            <a class="btn btn-accent" href="#contact"><span class="btn-label" data-label="Parler de votre projet">Parler de votre projet</span></a>
+            <a class="btn btn-ghost" href="#solutions"><span class="btn-label" data-label="Voir nos solutions">Voir nos solutions</span></a>
           </div>
         </div>
-  
-
-      <!-- En-tête -->
-      <div class="site-header on-dark">
-        <div class="wrap">
-          <header style="display: flex; align-items: center; justify-content: space-between; gap: 32px; block-size: 96px;">
-            <a href="#top" aria-label="LBA Factory, accueil" style="display: inline-flex; align-items: center; gap: 12px; min-block-size: 44px; color: inherit; text-decoration: none;">
-              <img src="/media/logo-lba-factory.png" alt="" width="168" height="32" style="display: block; inline-size: 168px; block-size: auto;">
-            </a>
-            <div style="display: flex; align-items: center; gap: 16px;">
-              <nav class="nav" aria-label="Navigation principale">
-                <ul style="display: flex; gap: 4px;">
-                  <li><a href="#solutions">Solutions</a></li>
-                  <li><a href="#expertises">Expertises</a></li>
-                  <li><a href="#references">Références</a></li>
-                  <li><a href="#agence">L’agence</a></li>
-                  <li><a href="#recrutement">Nous rejoindre</a></li>
-                </ul>
-              </nav>
-              <div class="lang-wrap" style="position: relative;">
-                <button class="lang-btn" type="button" aria-expanded="false" aria-controls="langues" data-action="toggle-lang"><span class="sr">Langue : </span><span>Français</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
-            
-                  <ul id="langues" class="lang-list" hidden>
-                    <li><a href="#fr" lang="fr" hreflang="fr" aria-current="true"><span>Français</span><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></li>
-                    <li><a href="#en" lang="en" hreflang="en">English</a></li>
-                    <li><a href="#ar" lang="ar" hreflang="ar" dir="rtl">العربية</a></li>
-                  </ul>
-            
-              </div>
-              <a class="btn btn-accent head-cta" href="#contact" style="block-size: 44px;"><span class="btn-label">Parler de votre projet</span></a>
-              <button class="btn menu-btn" type="button" aria-expanded="false" aria-controls="menu-mobile" data-action="open-menu"><span class="btn-label">Menu</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button>
-            </div>
-          </header>
-        </div>
-      </div>
-
-      <!-- Hero -->
-      <div class="on-dark" style="background: var(--surface-page); color: var(--text-inverse);">
-        <div class="wrap">
-
-
-          <main class="grid hero-grid" style="padding-block: 64px 112px; align-items: flex-end">
-            <div style="grid-column: 1 / span 5; display: flex; flex-direction: column; gap: 28px; justify-content: flex-end">
-              <h1 style="font: 400 64px/1.02 var(--serif); font-size: 46px">Agence de développement web et applicatif <span class="hl">au Maroc</span></h1>
-              <p style="font: 400 19px/1.55 var(--sans); max-width: 40ch; color: var(--text-secondary-inverse); font-size: 18px">Depuis 2016, LBA Factory conçoit et développe vos applications métier, sites web et solutions d’IA.</p>
-              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                <a class="btn btn-accent" href="#contact"><span class="btn-label" style="font-size: 16px">Parler de votre projet</span><svg class="flip" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12.5M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
-                <a class="btn btn-ghost" href="#solutions"><span class="btn-label">Voir nos solutions</span></a>
-              </div>
-            </div>
-            <div style="grid-column: 6 / span 7; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;">
-              <div class="squircle" role="region" aria-roledescription="carrousel" aria-label="Photos de l’équipe" style="grid-column: 1 / span 2; position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #2A2A2A;">
-                <img class="photo slide" data-slide="0" src="/media/hero-1.webp" srcset="/media/hero-1-800.webp 800w, /media/hero-1.webp 1600w" sizes="(max-width: 900px) 100vw, 760px" width="1600" height="1067" decoding="async" fetchpriority="high" alt="Une collaboratrice explique un projet à deux collègues autour d’une tablette." aria-hidden="false" style="opacity: 1; transform: scale(1); object-position: 60% 38%;">
-    <img class="photo slide" data-slide="1" src="/media/hero-2.webp" srcset="/media/hero-2-800.webp 800w, /media/hero-2.webp 1600w" sizes="(max-width: 900px) 100vw, 760px" width="1600" height="1067" decoding="async" loading="lazy" alt="Deux personnes consultent une tablette au-dessus d’un carnet de croquis." aria-hidden="true" style="opacity: 0; transform: scale(1.14); object-position: 62% 40%;">
-    <img class="photo slide" data-slide="2" src="/media/equipe-table.webp" srcset="/media/equipe-table-800.webp 800w, /media/equipe-table.webp 1600w" sizes="(max-width: 900px) 100vw, 760px" width="1600" height="1067" decoding="async" loading="lazy" alt="Une équipe travaille autour d’une table dans un espace de travail lumineux." aria-hidden="true" style="opacity: 0; transform: scale(1.14); object-position: 45% 40%;">
-                <div class="pager " data-slider="a" role="group" aria-label="Choisir la photo">
-                  <button class="pager-dot" type="button" aria-label="Photo 1 sur 3" aria-current="true" data-action="pick" data-index="0"><span><i class="pager-fill"></i></span></button>
-    <button class="pager-dot" type="button" aria-label="Photo 2 sur 3" aria-current="false" data-action="pick" data-index="1"><span><i class="pager-fill"></i></span></button>
-    <button class="pager-dot" type="button" aria-label="Photo 3 sur 3" aria-current="false" data-action="pick" data-index="2"><span><i class="pager-fill"></i></span></button>
-                  <button class="pager-toggle" type="button" aria-label="Mettre en pause le défilement des photos" data-action="toggle-auto" data-slider="a">
-                    <svg class="ico-pause" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><line x1="104" y1="96" x2="104" y2="160" stroke="currentColor" stroke-width="16" stroke-linecap="round"></line><line x1="152" y1="96" x2="152" y2="160" stroke="currentColor" stroke-width="16" stroke-linecap="round"></line></svg>
-                    <svg class="ico-play" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><path d="M112 96 L160 128 L112 160 Z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"></path></svg>
-                  </button>
-                </div>
-              </div>
-              <div class="squircle" style="aspect-ratio: 5 / 4;"><img class="photo" src="/media/hero-reunion.webp" srcset="/media/hero-reunion-800.webp 800w, /media/hero-reunion.webp 1600w" sizes="(max-width: 900px) 100vw, 480px" width="1600" height="1067" loading="lazy" decoding="async" alt="Une collaboratrice échange avec une interlocutrice en réunion." style="object-position: 56% 30%;"></div>
-              <div class="squircle" style="aspect-ratio: 5 / 4;"><img class="photo" src="/media/devs-ecran.webp" srcset="/media/devs-ecran-800.webp 800w, /media/devs-ecran.webp 1600w" sizes="(max-width: 900px) 100vw, 480px" width="1600" height="1067" loading="lazy" decoding="async" alt="Trois développeurs étudient un écran ensemble." style="object-position: 55% 30%;"></div>
-              <p class="meta" style="grid-column: 1 / span 2;">Photos provisoires, équipe LBA Factory à Rabat à fournir</p>
-            </div>
-          </main>
-        </div>
-      </div>
-
-      <!-- Solutions -->
-  
-
-      <!-- Expertises -->
-      <section id="solutions" class="sec wrap " aria-labelledby="sol-titre" style="padding-block: 112px 96px; display: flex; flex-direction: column; gap: 40px;">
-        <div class="sec-head sec-head-stack">
-          <p class="surtitre">Trois domaines d’intervention</p>
-          <h2 id="sol-titre" style="font: 400 48px/1.05 var(--serif); font-size: 44px">Nos <span class="hl">solutions</span></h2>
-        </div>
-        <div class="cols-3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch;">
-          <article class="card">
-            <div style="aspect-ratio: 4 / 3;">
-              <div class="illu-zoom"><svg class="illu" viewBox="0 -32 400 368" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                <line x1="110" y1="80" x2="110" y2="240" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="290" y1="80" x2="290" y2="240" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="200" y1="30" x2="200" y2="275" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
-                <circle class="x-rise" style="--d: 0s;" cx="110" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 1.2s;" cx="110" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 0.6s;" cx="290" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 1.8s;" cx="290" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 0.3s;" cx="200" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 2.1s;" cx="200" cy="250" r="2.5" fill="#0A0A0A"></circle>
-                <g class="x-down"><polygon points="200,158 290,206 200,254 110,206" stroke="#0A0A0A" stroke-width="1" fill="none"></polygon><line x1="110" y1="206" x2="290" y2="206" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="200" y1="158" x2="200" y2="254" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
-                  <polygon points="200,174 260,206 200,238 140,206" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></polygon></g>
-                <g><polygon points="200,102 290,150 200,198 110,150" stroke="#0A0A0A" stroke-width="1" fill="none" style="fill: #F4F3F1;"></polygon>
-                  <polygon points="170,137 194,150 170,163 146,150" stroke="#0A0A0A" stroke-width="1" fill="none"></polygon><polygon points="230,137 254,150 230,163 206,150" stroke="#0A0A0A" stroke-width="1" fill="none"></polygon><polygon points="200,121 224,134 200,147 176,134" stroke="#0A0A0A" stroke-width="1" fill="none"></polygon><polygon class="x-node" style="--d: .6s;" points="200,153 224,166 200,179 176,166" stroke="#0A0A0A" stroke-width="1"></polygon>
-                  <line class="x-scan" x1="110" y1="150" x2="140" y2="134" stroke="#FEC300" stroke-width="3" stroke-linecap="round"></line></g>
-                <g class="x-up"><polygon points="200,48 290,96 200,144 110,96" stroke="#0A0A0A" stroke-width="1" fill="none" style="fill: #F4F3F1;"></polygon>
-                  <polygon points="200,68 252,96 200,124 148,96" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></polygon>
-                  <line class="x-grow" style="--d: 0.00s;" x1="168" y1="104" x2="168" y2="70" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line><line class="x-grow" style="--d: 0.12s;" x1="190" y1="94" x2="190" y2="42" stroke="#FEC300" stroke-width="4" stroke-linecap="round"></line><line class="x-grow" style="--d: 0.24s;" x1="212" y1="106" x2="212" y2="80" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line><line class="x-grow" style="--d: 0.36s;" x1="234" y1="96" x2="234" y2="56" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line></g>
-              </svg></div>
-            </div>
-            <div style="padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 12px;">
-              <h3 style="font: 400 32px/1.1 var(--serif); font-size: 28px">Applications métier</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary); font-size: 14px">Extranets, plateformes de suivi, outils de logistique&nbsp;: des applications sur mesure pour vos équipes.</p>
-            </div>
-          </article>
-          <article class="card">
-            <div style="aspect-ratio: 4 / 3;">
-              <div class="illu-zoom"><svg class="illu" viewBox="0 -32 400 368" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                <line x1="50" y1="60" x2="350" y2="60" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="50" y1="244" x2="350" y2="244" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="80" y1="30" x2="80" y2="274" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="320" y1="30" x2="320" y2="274" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
-                <rect class="x-layer" style="--dx: -52px; --dy: -40px; --d: 0s;" x="80" y="60" width="240" height="184" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></rect>
-                <rect class="x-layer" style="--dx: -26px; --dy: -20px; --d: .1s;" x="80" y="60" width="240" height="184" stroke="#0A0A0A" stroke-width="1" fill="none"></rect>
-                <rect x="80" y="60" width="240" height="184" stroke="#0A0A0A" stroke-width="1" fill="none" style="fill: #F4F3F1;"></rect>
-                <rect class="e-draw" style="--d: 0s;" pathLength="1" x="80" y="60" width="240" height="184" stroke="#0A0A0A" stroke-width="1.5" fill="none"></rect>
-                <line class="e-draw" style="--d: .15s;" pathLength="1" x1="80" y1="82" x2="320" y2="82" stroke="#0A0A0A" stroke-width="1" fill="none"></line>
-                <circle cx="94" cy="71" r="3" stroke="#0A0A0A" stroke-width="1" fill="none"></circle><circle cx="106" cy="71" r="3" stroke="#0A0A0A" stroke-width="1" fill="none"></circle><circle cx="118" cy="71" r="3" stroke="#0A0A0A" stroke-width="1" fill="none"></circle>
-                <rect class="e-draw" style="--d: .3s;" pathLength="1" x="96" y="96" width="208" height="56" stroke="#0A0A0A" stroke-width="1" fill="none"></rect>
-                <line class="e-draw" style="--d: .35s;" pathLength="1" x1="96" y1="96" x2="304" y2="152" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line class="e-draw" style="--d: .4s;" pathLength="1" x1="304" y1="96" x2="96" y2="152" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
-                <rect class="e-draw" style="--d: .45s;" pathLength="1" x="96" y="164" width="98" height="64" stroke="#0A0A0A" stroke-width="1" fill="none"></rect>
-                <circle class="e-draw" style="--d: .5s;" pathLength="1" cx="145" cy="196" r="18" stroke="#0A0A0A" stroke-width="1" fill="none"></circle>
-                <rect class="e-draw" style="--d: .6s;" pathLength="1" x="206" y="164" width="98" height="40" stroke="#0A0A0A" stroke-width="1" fill="none"></rect>
-                <rect class="e-fill" x="206" y="212" width="54" height="16" stroke="#0A0A0A" stroke-width="1"></rect>
-                <circle class="x-ripple" cx="233" cy="220" r="10" stroke="#FEC300" stroke-width="2" fill="none"></circle>
-                <g class="e-cur"><circle cx="306" cy="252" r="9" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></circle><path d="M302 246 L302 262 L306 258 L310 266 L313 264 L309 256 L315 256 Z" fill="#0A0A0A"></path></g>
-              </svg></div>
-            </div>
-            <div style="padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 12px;">
-              <h3 style="font: 400 32px/1.1 var(--serif); font-size: 28px">Sites web &amp; e-commerce</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary);">Sites, portails et boutiques en ligne sur des technologies open source (Drupal, PrestaShop, Magento).</p>
-            </div>
-          </article>
-          <article class="card">
-            <div style="aspect-ratio: 4 / 3;">
-              <div class="illu-zoom"><svg class="illu" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                <line x1="30" y1="150" x2="370" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
-                <line x1="38" y1="96" x2="154" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="38" y1="204" x2="154" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="38" y1="122" x2="154" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="38" y1="178" x2="154" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
-                <rect class="x-stream" style="--sx: 142px; --sy: 54px; --d: 0s;" x="38" y="93" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: 0px; --d: 0.4s;" x="38" y="147" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: -54px; --d: 0.8s;" x="38" y="201" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: 28px; --d: 1.2s;" x="38" y="119" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: -28px; --d: 1.6s;" x="38" y="175" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: 0px; --d: 2.0s;" x="38" y="147" width="6" height="6" fill="#0A0A0A"></rect>
-                <circle cx="226" cy="150" r="86" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></circle>
-                <ellipse cx="226" cy="102" rx="53.7" ry="12.9" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></ellipse><ellipse cx="226" cy="126" rx="67.9" ry="16.3" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></ellipse><ellipse cx="226" cy="150" rx="72.0" ry="17.3" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse><ellipse cx="226" cy="174" rx="67.9" ry="16.3" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></ellipse><ellipse cx="226" cy="198" rx="53.7" ry="12.9" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></ellipse>
-                <ellipse class="x-meridian" style="--d: -0.00s;" cx="226" cy="150" rx="72" ry="72" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse><ellipse class="x-meridian" style="--d: -0.75s;" cx="226" cy="150" rx="72" ry="72" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse><ellipse class="x-meridian" style="--d: -1.50s;" cx="226" cy="150" rx="72" ry="72" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse><ellipse class="x-meridian" style="--d: -2.25s;" cx="226" cy="150" rx="72" ry="72" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse>
-                <circle cx="226" cy="150" r="72" stroke="#0A0A0A" stroke-width="1.5" fill="none"></circle>
-                <circle class="x-node" style="--d: 0s;" cx="186" cy="110" r="4" stroke="#0A0A0A" stroke-width="1"></circle><circle class="x-node" style="--d: 0.6s;" cx="256" cy="98" r="4" stroke="#0A0A0A" stroke-width="1"></circle><circle class="x-node" style="--d: 1.2s;" cx="278" cy="170" r="4" stroke="#0A0A0A" stroke-width="1"></circle><circle class="x-node" style="--d: 1.8s;" cx="206" cy="200" r="4" stroke="#0A0A0A" stroke-width="1"></circle><circle class="x-node" style="--d: 0.9s;" cx="168" cy="156" r="4" stroke="#0A0A0A" stroke-width="1"></circle>
-                <circle class="x-core" cx="226" cy="150" r="9" fill="#FEC300" stroke="#0A0A0A" stroke-width="1"></circle>
-                <path class="x-out" style="--d: 0s;" pathLength="1" d="M298 150 C 322 150, 314 108, 342 108" stroke="#0A0A0A" stroke-width="1" fill="none"></path><rect class="x-pop" style="--d: 0s;" x="344" y="100" width="16" height="16" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1"></rect><path class="x-out" style="--d: 0.3s;" pathLength="1" d="M298 150 C 322 150, 314 150, 342 150" stroke="#0A0A0A" stroke-width="1" fill="none"></path><rect class="x-pop" style="--d: 0.3s;" x="344" y="142" width="16" height="16" fill="#FEC300" stroke="#0A0A0A" stroke-width="1"></rect><path class="x-out" style="--d: 0.6s;" pathLength="1" d="M298 150 C 322 150, 314 192, 342 192" stroke="#0A0A0A" stroke-width="1" fill="none"></path><rect class="x-pop" style="--d: 0.6s;" x="344" y="184" width="16" height="16" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1"></rect>
-              </svg></div>
-            </div>
-            <div style="padding: 28px 28px 32px; display: flex; flex-direction: column; gap: 12px;">
-              <h3 style="font: 400 32px/1.1 var(--serif);">IA &amp; automatisation</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary);">Assistants, traitement de données, automatisation des tâches répétitives.</p>
-            </div>
-          </article>
-        </div>
-      </section><section id="expertises" class="sec wrap" aria-labelledby="exp-titre" style="padding-block: 0 112px; display: flex; flex-direction: column; gap: 32px;">
-        <h2 id="exp-titre" style="font: 400 48px/1.05 var(--serif); font-size: 44px"><span class="hl" style="font-size: 44px">Deux expertises</span> pour vos projets</h2>
-        <ul class="rows" style="border-block: 1px solid var(--border-subtle);">
-          <li class="grid" style="align-items: first baseline; padding-block: 28px;">
-            <h3 style="grid-column: 1 / span 3; font: 400 30px/1.1 var(--serif);">DA et UI design</h3>
-            <p style="grid-column: 4 / span 6; font: 400 17px/1.55 var(--sans);">La touche française&nbsp;: direction artistique et UI design réalisés par LBA, notre agence partenaire en France, avec ses équipes locales.</p>
-          </li>
-          <li class="grid" style="align-items: first baseline; padding-block: 28px;">
-            <h3 style="grid-column: 1 / span 3; font: 400 30px/1.1 var(--serif);">Tech</h3>
-            <p style="grid-column: 4 / span 6; font: 400 17px/1.55 var(--sans);">Architecture, développement front et back-end, maintenance applicative. Méthode agile, livraisons fréquentes.</p>
-            <p class="meta" style="grid-column: 10 / span 3; line-height: 1.6;">Technologies&nbsp;: Drupal, Symfony, PrestaShop, Magento, React, Angular</p>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Références -->
-      <section id="references" class="sec wrap" aria-labelledby="ref-titre" style="padding-block: 0 112px; display: flex; flex-direction: column; gap: 40px;">
-        <div class="sec-head sec-head-stack">
-          <p class="surtitre">Quelques projets menés</p>
-          <h2 id="ref-titre" style="font: 400 48px/1.05 var(--serif); font-size: 44px">Références</h2>
-        </div>
-        <ul class="cols-3 refs" tabindex="0" aria-label="Références" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
-          <li class="card">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; min-block-size: 200px; box-sizing: border-box;">
-              <p class="meta">Extranet</p>
-              <h3 style="font: 400 32px/1.1 var(--serif);">PSG</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary);">Évolution et maintenance de l’extranet.</p>
-            </div>
-            <div role="img" aria-label="Visuel du projet PSG, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font: 400 14px/1.45 var(--sans); color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
-          </li>
-          <li class="card">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; min-block-size: 200px; box-sizing: border-box;">
-              <p class="meta">Application</p>
-              <h3 style="font: 400 32px/1.1 var(--serif);">Orange</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary);">Application d’animation des communautés.</p>
-            </div>
-            <div role="img" aria-label="Visuel du projet Orange, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font: 400 14px/1.45 var(--sans); color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
-          </li>
-          <li class="card">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; min-block-size: 200px; box-sizing: border-box;">
-              <p class="meta">Type de projet, à fournir</p>
-              <h3 style="font: 400 32px/1.1 var(--serif);">Référence 3, à fournir</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary);">Description du projet, à fournir.</p>
-            </div>
-            <div role="img" aria-label="Visuel de la référence 3, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font: 400 14px/1.45 var(--sans); color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
-          </li>
-          <li class="card">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; min-block-size: 200px; box-sizing: border-box;">
-              <p class="meta">Type de projet, à fournir</p>
-              <h3 style="font: 400 32px/1.1 var(--serif);">Référence 4, à fournir</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary);">Description du projet, à fournir.</p>
-            </div>
-            <div role="img" aria-label="Visuel de la référence 4, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font: 400 14px/1.45 var(--sans); color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
-          </li>
-          <li class="card">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; min-block-size: 200px; box-sizing: border-box;">
-              <p class="meta">Type de projet, à fournir</p>
-              <h3 style="font: 400 32px/1.1 var(--serif);">Référence 5, à fournir</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary);">Description du projet, à fournir.</p>
-            </div>
-            <div role="img" aria-label="Visuel de la référence 5, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font: 400 14px/1.45 var(--sans); color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
-          </li>
-          <li class="card">
-            <div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; min-block-size: 200px; box-sizing: border-box;">
-              <p class="meta">Type de projet, à fournir</p>
-              <h3 style="font: 400 32px/1.1 var(--serif);">Référence 6, à fournir</h3>
-              <p style="font: 400 16px/1.55 var(--sans); color: var(--text-secondary);">Description du projet, à fournir.</p>
-            </div>
-            <div role="img" aria-label="Visuel de la référence 6, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; font: 400 14px/1.45 var(--sans); color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
-          </li>
-        </ul>
-      </section>
-
-      <!-- L'agence -->
-      <section id="agence" class="sec on-dark" aria-labelledby="agence-titre" style="background: var(--surface-inverse); color: var(--text-inverse);">
-        <div class="wrap grid" style="padding-block: 112px; align-items: center;">
-          <figure class="squircle" role="region" aria-roledescription="carrousel" aria-label="Photos de l’agence" style="grid-column: 1 / span 6; margin: 0; aspect-ratio: 4 / 3; position: relative; background: #2A2A2A;">
-            <div class="parallax-img" style="position: absolute; inset: 0;">
-              <img class="photo slide" data-slide="0" src="/media/equipe-table.webp" srcset="/media/equipe-table-800.webp 800w, /media/equipe-table.webp 1600w" sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1067" decoding="async" loading="lazy" alt="Une équipe travaille autour d’une table dans un espace de travail lumineux." aria-hidden="false" style="opacity: 1; transform: scale(1); object-position: 45% 40%;">
-    <img class="photo slide" data-slide="1" src="/media/prise-parole.webp" srcset="/media/prise-parole-800.webp 800w, /media/prise-parole.webp 1600w" sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1067" decoding="async" loading="lazy" alt="Une collaboratrice prend la parole en réunion." aria-hidden="true" style="opacity: 0; transform: scale(1.14); object-position: 70% 35%;">
-    <img class="photo slide" data-slide="2" src="/media/devs-ecran.webp" srcset="/media/devs-ecran-800.webp 800w, /media/devs-ecran.webp 1600w" sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1067" decoding="async" loading="lazy" alt="Trois développeurs étudient un écran ensemble." aria-hidden="true" style="opacity: 0; transform: scale(1.14); object-position: 55% 30%;">
-            </div>
-            <div class="pager " data-slider="b" role="group" aria-label="Choisir la photo de l’agence">
+        <div style="grid-column: 6 / span 7; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-2);">
+          <div class="squircle" role="region" aria-roledescription="carrousel" aria-label="Photos de l’équipe" style="grid-column: 1 / span 2; position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #2A2A2A;">
+            <img class="photo slide" data-slide="0" src="/media/hero-1.webp" srcset="/media/hero-1-800.webp 800w, /media/hero-1.webp 1600w" sizes="(max-width: 900px) 100vw, 760px" width="1600" height="1067" decoding="async" fetchpriority="high" alt="Une collaboratrice explique un projet à deux collègues autour d’une tablette." aria-hidden="false" style="opacity: 1; transform: scale(1); object-position: 60% 38%;">
+<img class="photo slide" data-slide="1" src="/media/hero-2.webp" srcset="/media/hero-2-800.webp 800w, /media/hero-2.webp 1600w" sizes="(max-width: 900px) 100vw, 760px" width="1600" height="1067" decoding="async" loading="lazy" alt="Deux personnes consultent une tablette au-dessus d’un carnet de croquis." aria-hidden="true" style="opacity: 0; transform: scale(1.14); object-position: 62% 40%;">
+<img class="photo slide" data-slide="2" src="/media/equipe-table.webp" srcset="/media/equipe-table-800.webp 800w, /media/equipe-table.webp 1600w" sizes="(max-width: 900px) 100vw, 760px" width="1600" height="1067" decoding="async" loading="lazy" alt="Une équipe travaille autour d’une table dans un espace de travail lumineux." aria-hidden="true" style="opacity: 0; transform: scale(1.14); object-position: 45% 40%;">
+            <div class="pager " data-slider="a" role="group" aria-label="Choisir la photo">
               <button class="pager-dot" type="button" aria-label="Photo 1 sur 3" aria-current="true" data-action="pick" data-index="0"><span><i class="pager-fill"></i></span></button>
-    <button class="pager-dot" type="button" aria-label="Photo 2 sur 3" aria-current="false" data-action="pick" data-index="1"><span><i class="pager-fill"></i></span></button>
-    <button class="pager-dot" type="button" aria-label="Photo 3 sur 3" aria-current="false" data-action="pick" data-index="2"><span><i class="pager-fill"></i></span></button>
-              <button class="pager-toggle" type="button" aria-label="Mettre en pause le défilement des photos de l’agence" data-action="toggle-auto" data-slider="b">
+<button class="pager-dot" type="button" aria-label="Photo 2 sur 3" aria-current="false" data-action="pick" data-index="1"><span><i class="pager-fill"></i></span></button>
+<button class="pager-dot" type="button" aria-label="Photo 3 sur 3" aria-current="false" data-action="pick" data-index="2"><span><i class="pager-fill"></i></span></button>
+              <button class="pager-toggle" type="button" aria-label="Mettre en pause le défilement des photos" data-action="toggle-auto" data-slider="a">
                 <svg class="ico-pause" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><line x1="104" y1="96" x2="104" y2="160" stroke="currentColor" stroke-width="16" stroke-linecap="round"></line><line x1="152" y1="96" x2="152" y2="160" stroke="currentColor" stroke-width="16" stroke-linecap="round"></line></svg>
-                    <svg class="ico-play" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><path d="M112 96 L160 128 L112 160 Z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"></path></svg>
+                <svg class="ico-play" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><path d="M112 96 L160 128 L112 160 Z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"></path></svg>
               </button>
             </div>
-          </figure>
-          <div style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 28px;">
-            <h2 id="agence-titre" style="font: 400 56px/1.05 var(--serif); font-size: 46px">Basés <span class="hl">à Rabat</span>, adossés à une agence en France</h2>
-            <p style="font: 400 20px/1.5 var(--serif); font-size: 18px; color: var(--text-secondary-inverse); font-family: var(--sans)">LBA Factory existe depuis 10 ans. Notre équipe travaille avec LBA, agence digitale en France.</p>
-            <dl style="display: flex; flex-direction: column; border-block-start: 1px solid var(--border-subtle-inverse);">
-              <div style="display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding-block: 20px; border-block-end: 1px solid var(--border-subtle-inverse);">
-                <dt style="display: flex; align-items: center; gap: 10px; font: 500 17px/1.3 var(--sans);"><span aria-hidden="true" style="inline-size: 12px; block-size: 12px; border-radius: 999px; background: var(--accent-maroc);"></span>LBA Factory, Maroc</dt>
-                <dd style="grid-row: span 2; align-self: center; font: 400 48px/1 var(--serif);"><span class="count" data-to="5">5</span> <span style="font: 400 15px/1 var(--sans); color: var(--text-secondary-inverse);">collaborateurs</span></dd>
-                <dd style="font: 400 15px/1.5 var(--sans); color: var(--text-secondary-inverse); padding-inline-start: 22px; font-size: 14px">Équipe de développement à Rabat.</dd>
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding-block: 20px;">
-                <dt style="display: flex; align-items: center; gap: 10px; font: 500 17px/1.3 var(--sans);"><span aria-hidden="true" style="inline-size: 12px; block-size: 12px; border-radius: 999px; background: transparent; box-shadow: inset 0 0 0 1.5px #1A1A1A;"></span>LBA, France</dt>
-                <dd style="grid-row: span 2; align-self: center; font: 400 48px/1 var(--serif);"><span class="count" data-to="20">20</span> <span style="font: 400 15px/1 var(--sans); color: var(--text-secondary-inverse);">collaborateurs</span></dd>
-                <dd style="font: 400 15px/1.5 var(--sans); color: var(--text-secondary-inverse); padding-inline-start: 22px; font-size: 14px">Agence digitale.</dd>
-              </div>
-            </dl>
           </div>
+          <div class="squircle" style="aspect-ratio: 5 / 4;"><img class="photo" src="/media/hero-reunion.webp" srcset="/media/hero-reunion-800.webp 800w, /media/hero-reunion.webp 1600w" sizes="(max-width: 900px) 100vw, 480px" width="1600" height="1067" loading="lazy" decoding="async" alt="Une collaboratrice échange avec une interlocutrice en réunion." style="object-position: 56% 30%;"></div>
+          <div class="squircle" style="aspect-ratio: 5 / 4;"><img class="photo" src="/media/devs-ecran.webp" srcset="/media/devs-ecran-800.webp 800w, /media/devs-ecran.webp 1600w" sizes="(max-width: 900px) 100vw, 480px" width="1600" height="1067" loading="lazy" decoding="async" alt="Trois développeurs étudient un écran ensemble." style="object-position: 55% 30%;"></div>
+          
         </div>
-      </section>
-
-      <!-- Nous rejoindre -->
-      <section id="recrutement" class="sec wrap" aria-labelledby="rec-titre" style="padding-block: 112px; display: flex; flex-direction: column; gap: 40px;">
-        <div class="sec-head" style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px;">
-          <h2 id="rec-titre" style="font: 400 48px/1.05 var(--serif); font-size: 44px">Nous <span class="hl">rejoindre</span></h2>
-          <p style="font: 400 18px/1.5 var(--sans); color: var(--text-secondary);">LBA Factory recrute à Rabat.</p>
-        </div>
-        <ul class="rows" style="border-block: 1px solid var(--border-subtle);">
-          <li class="grid" style="align-items: center; padding-block: 24px;">
-            <p class="meta" style="grid-column: 1 / span 2;">CDI, temps plein</p>
-            <p class="meta" style="grid-column: 3 / span 2;">Rabat, Maroc</p>
-            <h3 style="grid-column: 5 / span 6; font: 400 24px/1.2 var(--serif);">Ingénieur études et développement PHP Symfony confirmé(e) H/F</h3>
-            <div style="grid-column: 11 / span 2; justify-self: end;"><a class="lnk" href="#offre-symfony">Postuler<span class="sr"> : Ingénieur études et développement PHP Symfony confirmé(e)</span><svg class="flip" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
-          </li>
-          <li class="grid" style="align-items: center; padding-block: 24px;">
-            <p class="meta" style="grid-column: 1 / span 2;">CDI, temps plein</p>
-            <p class="meta" style="grid-column: 3 / span 2;">Rabat, Maroc</p>
-            <h3 style="grid-column: 5 / span 6; font: 400 24px/1.2 var(--serif);">Ingénieur études et développement Angular, React confirmé(e) H/F</h3>
-            <div style="grid-column: 11 / span 2; justify-self: end;"><a class="lnk" href="#offre-front">Postuler<span class="sr"> : Ingénieur études et développement Angular, React confirmé(e)</span><svg class="flip" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
-          </li>
-        </ul>
-        <div class="grid" style="row-gap: 24px;">
-          <div class="card" style="grid-column: 1 / span 4; padding: 28px; justify-content: space-between; gap: 24px;">
-            <p style="font: 400 28px/1.15 var(--serif);">Aucune offre ne vous correspond ?</p>
-            <div><a class="btn btn-primary" href="#candidature"><span class="btn-label">Candidature spontanée</span><svg class="flip" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h12.5M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
-          </div>
-          <figure class="squircle" style="grid-column: 5 / span 4; margin: 0; aspect-ratio: 4 / 3;"><img class="photo" src="/media/prise-parole.webp" srcset="/media/prise-parole-800.webp 800w, /media/prise-parole.webp 1600w" sizes="(max-width: 900px) 100vw, 480px" width="1600" height="1067" loading="lazy" decoding="async" alt="Une collaboratrice prend la parole en réunion." style="object-position: 74% 35%;"></figure>
-          <figure class="squircle" style="grid-column: 9 / span 4; margin: 0; aspect-ratio: 4 / 3;"><img class="photo" src="/media/echange-bureau.webp" srcset="/media/echange-bureau-800.webp 800w, /media/echange-bureau.webp 1600w" sizes="(max-width: 900px) 100vw, 480px" width="1600" height="1067" loading="lazy" decoding="async" alt="Une collaboratrice échange avec une collègue à son bureau." style="object-position: 46% 30%;"></figure>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="sec" aria-labelledby="contact-titre" style="background: var(--surface-subtle);">
-        <div class="wrap grid" style="padding-block: 112px;">
-          <div style="grid-column: 1 / span 5; display: flex; flex-direction: column; gap: 24px;">
-            <h2 id="contact-titre" style="font: 400 56px/1.05 var(--serif); font-size: 44px">Parlons de <span class="hl">votre projet</span></h2>
-            <p style="font: 400 22px/1.5 var(--serif); max-width: 30ch; font-size: 18px; font-family: var(--sans)">Décrivez-nous votre besoin&nbsp;: nous revenons vers vous.</p>
-            <dl style="display: flex; flex-direction: column; gap: 10px; margin-block-start: 16px; font: 400 15px/1.5 var(--sans);">
-              <div style="display: flex; gap: 8px;"><dt style="color: var(--text-secondary); min-inline-size: 88px;">Adresse</dt><dd><span class="todo">à fournir</span></dd></div>
-              <div style="display: flex; gap: 8px;"><dt style="color: var(--text-secondary); min-inline-size: 88px;">E-mail</dt><dd><span class="todo">à fournir</span></dd></div>
-              <div style="display: flex; gap: 8px;"><dt style="color: var(--text-secondary); min-inline-size: 88px;">Téléphone</dt><dd><span class="todo">à fournir</span></dd></div>
-            </dl>
-            <figure class="map" style="margin: 0; margin-block-start: 24px;">
-              <svg class="map-svg" viewBox="0 0 345 304" role="img" aria-label="Plan au trait schématique de Rabat, point au centre-ville, adresse à fournir">
-                <line x1="3.7" y1="0" x2="3.7" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="40.6" y1="0" x2="40.6" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="77.6" y1="0" x2="77.6" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="114.6" y1="0" x2="114.6" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="151.5" y1="0" x2="151.5" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="188.5" y1="0" x2="188.5" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="225.4" y1="0" x2="225.4" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="262.4" y1="0" x2="262.4" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="299.4" y1="0" x2="299.4" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="336.3" y1="0" x2="336.3" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="373.3" y1="0" x2="373.3" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="15.8" x2="345" y2="15.8" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="51.8" x2="345" y2="51.8" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="87.7" x2="345" y2="87.7" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="123.6" x2="345" y2="123.6" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="159.5" x2="345" y2="159.5" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="195.5" x2="345" y2="195.5" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="231.4" x2="345" y2="231.4" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="267.3" x2="345" y2="267.3" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="303.3" x2="345" y2="303.3" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line>
-                <path d="M356.0 -25.6 L356.0 -11.8 L306.8 24.1 L262.4 57.3 L218.0 84.9 L188.5 98.7 L166.3 104.3 L149.1 115.3 L126.9 129.1 L99.8 148.5 L72.7 170.6 L48.0 195.5 L23.4 223.1 L3.7 236.9 L3.7 333.7 L410.2 333.7 L410.2 -25.6 Z" fill="#FFFFFF" stroke="none"></path>
-                <path d="M177.4 100.1 L195.9 112.6 L213.1 129.1 L230.4 148.5 L245.2 170.6 L259.9 195.5 L269.8 223.1 L282.1 264.6 L296.9 319.9" stroke="#0A0A0A" stroke-width="9" stroke-linecap="butt" fill="none"></path>
-                <path d="M177.4 100.1 L195.9 112.6 L213.1 129.1 L230.4 148.5 L245.2 170.6 L259.9 195.5 L269.8 223.1 L282.1 264.6 L296.9 319.9" stroke="#FDFCFC" stroke-width="7.4" stroke-linecap="butt" fill="none"></path>
-                <path class="map-draw" pathLength="1" d="M356.0 -11.8 L306.8 24.1 L262.4 57.3 L218.0 84.9 L188.5 98.7" stroke="#0A0A0A" stroke-width="1" fill="none"></path>
-                <path class="map-draw" pathLength="1" d="M166.3 104.3 L149.1 115.3 L126.9 129.1 L99.8 148.5 L72.7 170.6 L48.0 195.5 L23.4 223.1 L3.7 236.9" stroke="#0A0A0A" stroke-width="1" fill="none" style="--d: .2s;"></path>
-                <path d="M166.3 104.3 L151.5 109.8 L141.7 126.4 L149.1 134.7 L183.6 134.7 L190.9 120.9 L181.1 107.0 Z" stroke="#0A0A0A" stroke-width=".7" stroke-dasharray="2 2.5" fill="none"></path>
-                <path class="map-draw" pathLength="1" d="M173.7 123.6 L171.2 143.0 L166.3 162.3 L158.9 184.4" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.50s;"></path><path class="map-draw" pathLength="1" d="M119.5 134.7 L151.5 137.4 L181.1 137.4 L208.2 134.7" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.62s;"></path><path class="map-draw" pathLength="1" d="M158.9 184.4 L144.1 206.5 L124.4 231.4 L109.6 261.8" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.74s;"></path><path class="map-draw" pathLength="1" d="M158.9 184.4 L188.5 201.0 L225.4 223.1 L242.7 256.3" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.86s;"></path><path class="map-draw" pathLength="1" d="M99.8 148.5 L126.9 173.4 L144.1 201.0" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.98s;"></path><path class="map-draw" pathLength="1" d="M232.8 84.9 L262.4 57.3 L299.4 68.3 L324.0 98.7" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 1.10s;"></path>
-                <text x="20.9" y="181.7" font-family="Space Grotesk Variable, Space Grotesk, system-ui, sans-serif" font-size="10" fill="#6B675F" font-style="normal" transform="rotate(-38 20.9 181.7)">Océan Atlantique</text>
-                <text x="282.1" y="51.8" font-family="Space Grotesk Variable, Space Grotesk, system-ui, sans-serif" font-size="10" fill="#6B675F">Salé</text>
-                <text x="277.2" y="187.2" font-family="Space Grotesk Variable, Space Grotesk, system-ui, sans-serif" font-size="9" fill="#6B675F" transform="rotate(70 269.8 187.2)">Bouregreg</text>
-                <text x="138.0" y="100.1" font-family="Space Grotesk Variable, Space Grotesk, system-ui, sans-serif" font-size="9" fill="#6B675F">Médina</text>
-                <text x="85.0" y="245.2" font-family="Space Grotesk Variable, Space Grotesk, system-ui, sans-serif" font-size="9" fill="#6B675F">Agdal</text>
-                <text x="232.8" y="242.5" font-family="Space Grotesk Variable, Space Grotesk, system-ui, sans-serif" font-size="9" fill="#6B675F">Hay Riad</text>
-                <circle class="map-ripple" cx="172.2" cy="151.8" r="6" fill="none" stroke="#FEC300" stroke-width="1.5"></circle>
-                <circle cx="172.2" cy="151.8" r="4.5" fill="#FEC300" stroke="#0A0A0A" stroke-width="1"></circle>
-                <text x="182.2" y="155.8" font-family="Space Grotesk Variable, Space Grotesk, system-ui, sans-serif" font-size="12" font-weight="500" fill="#0A0A0A">Rabat</text>
-              </svg>
-            </figure>
-          </div>
-          <form class="card" action="/api/contact" method="post" data-contact style="grid-column: 7 / span 6; padding: 40px; gap: 20px;" novalidate>
-            <div class="form-row" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px;">
-              <div class="field"><label for="nom">Nom</label><input class="input" id="nom" name="nom" type="text" autocomplete="family-name"></div>
-              <div class="field"><label for="prenom">Prénom</label><input class="input" id="prenom" name="prenom" type="text" autocomplete="given-name"></div>
-            </div>
-            <div class="form-row" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px;">
-              <div class="field"><label for="email">E-mail</label><input class="input" id="email" name="email" type="email" autocomplete="email"></div>
-              <div class="field"><label for="tel">Téléphone</label><input class="input" id="tel" name="tel" type="tel" autocomplete="tel"></div>
-            </div>
-            <div class="field"><label for="societe">Société</label><input class="input" id="societe" name="societe" type="text" autocomplete="organization"></div>
-            <div class="field">
-              <label for="sujet">Sujet</label>
-              <div class="select-wrap">
-                <select class="input" id="sujet" name="sujet"><option value="">Choisir un sujet</option></select>
-                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </div>
-            </div>
-            <div class="field"><label for="message">Message</label><textarea class="input" id="message" name="message" rows="5"></textarea></div>
-            <div class="hp" aria-hidden="true"><label for="site-web">Ne pas remplir</label><input id="site-web" name="site_web" type="text" tabindex="-1" autocomplete="off"></div>
-            <p class="form-status" role="status" aria-live="polite"></p>
-            <div><button class="btn btn-primary" type="submit"><span class="btn-label">Envoyer votre message</span></button></div>
-            <p class="meta">Mention loi 09-08 et numéro CNDP&nbsp;: <span class="todo">à reprendre du site actuel</span></p>
-          </form>
-        </div>
-      </section>
-
-      <!-- Pied de page -->
-      <footer class="on-dark" style="background: var(--surface-inverse); color: var(--text-inverse);">
-        <div class="wrap foot" style="display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-block: 40px;">
-          <a href="#top" aria-label="LBA Factory, accueil" style="display: inline-flex; align-items: center; gap: 12px; min-block-size: 44px; color: inherit; text-decoration: none;"><img src="/media/logo-lba-factory.png" alt="" width="147" height="28" style="display: block; inline-size: 147px; block-size: auto;"></a>
-          <p style="font: 400 14px/1.4 var(--sans); color: var(--text-secondary-inverse);">© LBA Factory</p>
-          <a class="lnk" href="#mentions-legales" style="font-weight: 400; font-size: 14px;">Mentions légales</a>
-        </div>
-      </footer>
+      </main>
     </div>
+  </div>
 
+  <!-- Solutions -->
+  
+
+  <!-- Expertises -->
+  <section id="solutions" class="sec wrap " aria-labelledby="sol-titre" style="padding-block: var(--s-section) var(--s-section-sm); display: flex; flex-direction: column; gap: var(--s-5);">
+    <div class="sec-head sec-head-stack">
+      <h2 id="sol-titre"><span class="h-muted">Solutions</span> Trois domaines d’intervention</h2>
+    </div>
+    <div class="cols-3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-3); align-items: stretch;">
+      <article class="card">
+        <div style="aspect-ratio: 4 / 3;">
+          <div class="illu-zoom"><svg class="illu" viewBox="0 -32 400 368" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <line x1="110" y1="80" x2="110" y2="240" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="290" y1="80" x2="290" y2="240" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="200" y1="30" x2="200" y2="275" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
+            <circle class="x-rise" style="--d: 0s;" cx="110" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 1.2s;" cx="110" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 0.6s;" cx="290" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 1.8s;" cx="290" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 0.3s;" cx="200" cy="250" r="2.5" fill="#0A0A0A"></circle><circle class="x-rise" style="--d: 2.1s;" cx="200" cy="250" r="2.5" fill="#0A0A0A"></circle>
+            <g class="x-down"><polygon points="200,158 290,206 200,254 110,206" stroke="#0A0A0A" stroke-width="1" fill="none"></polygon><line x1="110" y1="206" x2="290" y2="206" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="200" y1="158" x2="200" y2="254" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
+              <polygon points="200,174 260,206 200,238 140,206" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></polygon></g>
+            <g><polygon points="200,102 290,150 200,198 110,150" stroke="#0A0A0A" stroke-width="1" fill="none" style="fill: #F4F3F1;"></polygon>
+              <polygon points="170,137 194,150 170,163 146,150" stroke="#0A0A0A" stroke-width="1" fill="none"></polygon><polygon points="230,137 254,150 230,163 206,150" stroke="#0A0A0A" stroke-width="1" fill="none"></polygon><polygon points="200,121 224,134 200,147 176,134" stroke="#0A0A0A" stroke-width="1" fill="none"></polygon><polygon class="x-node" style="--d: .6s;" points="200,153 224,166 200,179 176,166" stroke="#0A0A0A" stroke-width="1"></polygon>
+              <line class="x-scan" x1="110" y1="150" x2="140" y2="134" stroke="#FEC300" stroke-width="3" stroke-linecap="round"></line></g>
+            <g class="x-up"><polygon points="200,48 290,96 200,144 110,96" stroke="#0A0A0A" stroke-width="1" fill="none" style="fill: #F4F3F1;"></polygon>
+              <polygon points="200,68 252,96 200,124 148,96" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></polygon>
+              <line class="x-grow" style="--d: 0.00s;" x1="168" y1="104" x2="168" y2="70" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line><line class="x-grow" style="--d: 0.12s;" x1="190" y1="94" x2="190" y2="42" stroke="#FEC300" stroke-width="4" stroke-linecap="round"></line><line class="x-grow" style="--d: 0.24s;" x1="212" y1="106" x2="212" y2="80" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line><line class="x-grow" style="--d: 0.36s;" x1="234" y1="96" x2="234" y2="56" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line></g>
+          </svg></div>
+        </div>
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2);">
+          <h3>Applications métier</h3>
+          <p style="color: var(--text-secondary);">Extranets, plateformes de suivi, outils de logistique&nbsp;: des applications sur mesure pour vos équipes.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div style="aspect-ratio: 4 / 3;">
+          <div class="illu-zoom"><svg class="illu" viewBox="0 -32 400 368" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <line x1="50" y1="60" x2="350" y2="60" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="50" y1="244" x2="350" y2="244" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="80" y1="30" x2="80" y2="274" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="320" y1="30" x2="320" y2="274" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
+            <rect class="x-layer" style="--dx: -52px; --dy: -40px; --d: 0s;" x="80" y="60" width="240" height="184" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></rect>
+            <rect class="x-layer" style="--dx: -26px; --dy: -20px; --d: .1s;" x="80" y="60" width="240" height="184" stroke="#0A0A0A" stroke-width="1" fill="none"></rect>
+            <rect x="80" y="60" width="240" height="184" stroke="#0A0A0A" stroke-width="1" fill="none" style="fill: #F4F3F1;"></rect>
+            <rect class="e-draw" style="--d: 0s;" pathLength="1" x="80" y="60" width="240" height="184" stroke="#0A0A0A" stroke-width="1.5" fill="none"></rect>
+            <line class="e-draw" style="--d: .15s;" pathLength="1" x1="80" y1="82" x2="320" y2="82" stroke="#0A0A0A" stroke-width="1" fill="none"></line>
+            <circle cx="94" cy="71" r="3" stroke="#0A0A0A" stroke-width="1" fill="none"></circle><circle cx="106" cy="71" r="3" stroke="#0A0A0A" stroke-width="1" fill="none"></circle><circle cx="118" cy="71" r="3" stroke="#0A0A0A" stroke-width="1" fill="none"></circle>
+            <rect class="e-draw" style="--d: .3s;" pathLength="1" x="96" y="96" width="208" height="56" stroke="#0A0A0A" stroke-width="1" fill="none"></rect>
+            <line class="e-draw" style="--d: .35s;" pathLength="1" x1="96" y1="96" x2="304" y2="152" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line class="e-draw" style="--d: .4s;" pathLength="1" x1="304" y1="96" x2="96" y2="152" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
+            <rect class="e-draw" style="--d: .45s;" pathLength="1" x="96" y="164" width="98" height="64" stroke="#0A0A0A" stroke-width="1" fill="none"></rect>
+            <circle class="e-draw" style="--d: .5s;" pathLength="1" cx="145" cy="196" r="18" stroke="#0A0A0A" stroke-width="1" fill="none"></circle>
+            <rect class="e-draw" style="--d: .6s;" pathLength="1" x="206" y="164" width="98" height="40" stroke="#0A0A0A" stroke-width="1" fill="none"></rect>
+            <rect class="e-fill" x="206" y="212" width="54" height="16" stroke="#0A0A0A" stroke-width="1"></rect>
+            <circle class="x-ripple" cx="233" cy="220" r="10" stroke="#FEC300" stroke-width="2" fill="none"></circle>
+            <g class="e-cur"><circle cx="306" cy="252" r="9" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></circle><path d="M302 246 L302 262 L306 258 L310 266 L313 264 L309 256 L315 256 Z" fill="#0A0A0A"></path></g>
+          </svg></div>
+        </div>
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2);">
+          <h3>Sites web &amp; e-commerce</h3>
+          <p style="color: var(--text-secondary);">Sites, portails et boutiques en ligne sur des technologies open source (Drupal, PrestaShop, Magento).</p>
+        </div>
+      </article>
+      <article class="card">
+        <div style="aspect-ratio: 4 / 3;">
+          <div class="illu-zoom"><svg class="illu" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <line x1="30" y1="150" x2="370" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
+            <line x1="38" y1="96" x2="154" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="38" y1="204" x2="154" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="38" y1="122" x2="154" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line><line x1="38" y1="178" x2="154" y2="150" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></line>
+            <rect class="x-stream" style="--sx: 142px; --sy: 54px; --d: 0s;" x="38" y="93" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: 0px; --d: 0.4s;" x="38" y="147" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: -54px; --d: 0.8s;" x="38" y="201" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: 28px; --d: 1.2s;" x="38" y="119" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: -28px; --d: 1.6s;" x="38" y="175" width="6" height="6" fill="#0A0A0A"></rect><rect class="x-stream" style="--sx: 142px; --sy: 0px; --d: 2.0s;" x="38" y="147" width="6" height="6" fill="#0A0A0A"></rect>
+            <circle cx="226" cy="150" r="86" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></circle>
+            <ellipse cx="226" cy="102" rx="53.7" ry="12.9" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></ellipse><ellipse cx="226" cy="126" rx="67.9" ry="16.3" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></ellipse><ellipse cx="226" cy="150" rx="72.0" ry="17.3" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse><ellipse cx="226" cy="174" rx="67.9" ry="16.3" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></ellipse><ellipse cx="226" cy="198" rx="53.7" ry="12.9" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="1 3" fill="none"></ellipse>
+            <ellipse class="x-meridian" style="--d: -0.00s;" cx="226" cy="150" rx="72" ry="72" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse><ellipse class="x-meridian" style="--d: -0.75s;" cx="226" cy="150" rx="72" ry="72" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse><ellipse class="x-meridian" style="--d: -1.50s;" cx="226" cy="150" rx="72" ry="72" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse><ellipse class="x-meridian" style="--d: -2.25s;" cx="226" cy="150" rx="72" ry="72" stroke="#0A0A0A" stroke-width="1" fill="none"></ellipse>
+            <circle cx="226" cy="150" r="72" stroke="#0A0A0A" stroke-width="1.5" fill="none"></circle>
+            <circle class="x-node" style="--d: 0s;" cx="186" cy="110" r="4" stroke="#0A0A0A" stroke-width="1"></circle><circle class="x-node" style="--d: 0.6s;" cx="256" cy="98" r="4" stroke="#0A0A0A" stroke-width="1"></circle><circle class="x-node" style="--d: 1.2s;" cx="278" cy="170" r="4" stroke="#0A0A0A" stroke-width="1"></circle><circle class="x-node" style="--d: 1.8s;" cx="206" cy="200" r="4" stroke="#0A0A0A" stroke-width="1"></circle><circle class="x-node" style="--d: 0.9s;" cx="168" cy="156" r="4" stroke="#0A0A0A" stroke-width="1"></circle>
+            <circle class="x-core" cx="226" cy="150" r="9" fill="#FEC300" stroke="#0A0A0A" stroke-width="1"></circle>
+            <path class="x-out" style="--d: 0s;" pathLength="1" d="M298 150 C 322 150, 314 108, 342 108" stroke="#0A0A0A" stroke-width="1" fill="none"></path><rect class="x-pop" style="--d: 0s;" x="344" y="100" width="16" height="16" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1"></rect><path class="x-out" style="--d: 0.3s;" pathLength="1" d="M298 150 C 322 150, 314 150, 342 150" stroke="#0A0A0A" stroke-width="1" fill="none"></path><rect class="x-pop" style="--d: 0.3s;" x="344" y="142" width="16" height="16" fill="#FEC300" stroke="#0A0A0A" stroke-width="1"></rect><path class="x-out" style="--d: 0.6s;" pathLength="1" d="M298 150 C 322 150, 314 192, 342 192" stroke="#0A0A0A" stroke-width="1" fill="none"></path><rect class="x-pop" style="--d: 0.6s;" x="344" y="184" width="16" height="16" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1"></rect>
+          </svg></div>
+        </div>
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2);">
+          <h3>IA &amp; automatisation</h3>
+          <p style="color: var(--text-secondary);">Assistants, traitement de données, automatisation des tâches répétitives.</p>
+        </div>
+      </article>
+    </div>
+  </section><section id="expertises" class="sec wrap" aria-labelledby="exp-titre" style="padding-block: 0 var(--s-section); display: flex; flex-direction: column; gap: var(--s-4);">
+    <h2 id="exp-titre"><span class="h-muted">Expertises</span> <span class="hl">Deux expertises</span> pour vos projets</h2>
+    <div class="exp-cards">
+      <article class="card exp-card exp-da">
+        <div class="exp-top"><p class="exp-tag"><span class="dot dot-fr" aria-hidden="true"></span>LBA, France</p><p class="exp-num" aria-hidden="true">01</p></div>
+        <div class="exp-media"><div class="illu-zoom"><svg class="illu illu-pro" viewBox="0 0 480 340" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="da-sh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0A0A0A" flood-opacity=".08"></feDropShadow><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#0A0A0A" flood-opacity=".06"></feDropShadow></filter>
+              <pattern id="da-grid" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#0A0A0A" fill-opacity=".16"></circle></pattern>
+            <radialGradient id="da-fade" cx="50%" cy="50%" r="60%"><stop offset=".6" stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"></stop></radialGradient><mask id="da-m" maskUnits="userSpaceOnUse" x="0" y="0" width="480" height="340"><rect width="480" height="340" fill="url(#da-fade)"></rect></mask>
+            </defs>
+            <g mask="url(#da-m)"><rect x="8" y="8" width="464" height="324" rx="16" fill="url(#da-grid)"></rect>
+            <line x1="0" y1="56" x2="480" y2="56" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="0" y1="284" x2="480" y2="284" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="96" y1="0" x2="96" y2="340" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="384" y1="0" x2="384" y2="340" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line></g>
+            <rect class="x-layer" style="--dx: -24px; --dy: -20px; --d: 0s;" x="96" y="56" width="288" height="228" rx="10" fill="none" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></rect>
+            <rect class="x-layer" style="--dx: -12px; --dy: -10px; --d: .1s;" x="96" y="56" width="288" height="228" rx="10" fill="#FFFFFF" fill-opacity=".6" stroke="#0A0A0A" stroke-width=".75"></rect>
+            <rect x="96" y="56" width="288" height="228" rx="10" fill="#FFFFFF" filter="url(#da-sh)"></rect>
+            <rect class="e-draw" style="--d: 0s;" pathLength="1" x="96" y="56" width="288" height="228" rx="10" fill="none" stroke="#0A0A0A" stroke-width="1.25"></rect>
+            <line x1="96" y1="78" x2="384" y2="78" stroke="#0A0A0A" stroke-width=".75"></line>
+            <circle cx="110" cy="67" r="2.5" fill="none" stroke="#0A0A0A" stroke-width=".75"></circle><circle cx="120" cy="67" r="2.5" fill="none" stroke="#0A0A0A" stroke-width=".75"></circle><circle cx="130" cy="67" r="2.5" fill="none" stroke="#0A0A0A" stroke-width=".75"></circle>
+            <text x="240" y="70" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#6E6E73">Accueil · 1920</text>
+            <line x1="112" y1="104" x2="236" y2="104" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="112" y1="148" x2="236" y2="148" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="112" y1="196" x2="236" y2="196" stroke="#0A0A0A" stroke-width=".75"></line>
+            <path class="e-draw" style="--d: .2s;" pathLength="1" d="M120 196 L152 104 L184 196 M131 164 L173 164" fill="none" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"></path>
+            <circle class="e-draw" style="--d: .3s;" pathLength="1" cx="210" cy="174" r="24" fill="none" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></circle>
+            <path class="e-draw" style="--d: .4s;" pathLength="1" d="M232 150 V196 M232 174 C232 160 222 150 210 150 C196 150 188 161 188 174 C188 187 196 198 210 198 C222 198 232 188 232 174" fill="none" stroke="#0A0A0A" stroke-width="1.5"></path>
+            <rect class="x-pop" style="--d: .5s;" x="148.5" y="100.5" width="7" height="7" fill="#FEC300" stroke="#0A0A0A" stroke-width=".75"></rect><rect class="x-pop" style="--d: .55s;" x="116.5" y="192.5" width="7" height="7" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></rect><rect class="x-pop" style="--d: .6s;" x="180.5" y="192.5" width="7" height="7" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></rect><rect class="x-pop" style="--d: .65s;" x="228.5" y="146.5" width="7" height="7" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></rect>
+            <rect class="x-type" style="--d: .1s;" x="112" y="214" width="116" height="6" rx="3" fill="#0A0A0A"></rect><rect class="x-type" style="--d: .2s;" x="112" y="228" width="96" height="4" rx="2" fill="#D2D2D7"></rect><rect class="x-type" style="--d: .3s;" x="112" y="238" width="108" height="4" rx="2" fill="#D2D2D7"></rect>
+            <rect class="x-pop" style="--d: .7s;" x="112" y="254" width="56" height="16" rx="8" fill="#FEC300"></rect><rect class="x-pop" style="--d: .75s;" x="174" y="254" width="50" height="16" rx="8" fill="none" stroke="#0A0A0A" stroke-width=".75"></rect>
+            <rect x="252" y="92" width="116" height="104" rx="6" fill="#F4F3F1"></rect>
+            <path d="M252 178 L290 142 L316 166 L332 152 L368 186 V190 a6 6 0 0 1 -6 6 H258 a6 6 0 0 1 -6 -6 Z" fill="#E8E7E4"></path><circle class="x-pop" style="--d: .45s;" cx="340" cy="118" r="9" fill="#FEC300"></circle>
+            <rect class="x-type" style="--d: .35s;" x="252" y="214" width="100" height="4" rx="2" fill="#D2D2D7"></rect><rect class="x-type" style="--d: .45s;" x="252" y="224" width="80" height="4" rx="2" fill="#D2D2D7"></rect>
+            <g class="x-pop" style="--d: .8s;"><line x1="237" y1="120" x2="251" y2="120" stroke="#0A0A0A" stroke-width=".75"></line><line x1="237" y1="116" x2="237" y2="124" stroke="#0A0A0A" stroke-width=".75"></line><line x1="251" y1="116" x2="251" y2="124" stroke="#0A0A0A" stroke-width=".75"></line><rect x="232" y="126" width="24" height="12" rx="6" fill="#0A0A0A"></rect><text x="244" y="134.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="7" fill="#FFFFFF">16</text></g>
+            <g class="x-layer" style="--dx: 14px; --dy: -8px; --d: .2s;">
+              <rect x="20" y="148" width="96" height="108" rx="8" fill="#FFFFFF" filter="url(#da-sh)"></rect><rect x="20" y="148" width="96" height="108" rx="8" fill="none" stroke="#0A0A0A" stroke-width=".75"></rect>
+              <text x="30" y="166" font-family="Inter, system-ui, sans-serif" font-size="7.5" fill="#0A0A0A">Couleurs</text>
+              <circle cx="36" cy="184" r="6" fill="#FEC300" stroke="#0A0A0A" stroke-width=".5"></circle><circle cx="36" cy="203" r="6" fill="#0A0A0A"></circle><circle cx="36" cy="222" r="6" fill="#F4F3F1" stroke="#0A0A0A" stroke-width=".5"></circle><circle cx="36" cy="241" r="6" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".5"></circle>
+              <text x="48" y="186.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7" fill="#6E6E73">#FEC300</text><text x="48" y="205.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7" fill="#6E6E73">#0A0A0A</text><text x="48" y="224.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7" fill="#6E6E73">#F4F3F1</text><text x="48" y="243.5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7" fill="#6E6E73">#FFFFFF</text>
+            </g>
+            <g class="x-layer" style="--dx: -12px; --dy: 10px; --d: .3s;">
+              <rect x="356" y="30" width="104" height="66" rx="8" fill="#FFFFFF" filter="url(#da-sh)"></rect><rect x="356" y="30" width="104" height="66" rx="8" fill="none" stroke="#0A0A0A" stroke-width=".75"></rect>
+              <text x="366" y="47" font-family="Inter, system-ui, sans-serif" font-size="7.5" fill="#0A0A0A">Typographie</text>
+              <text x="366" y="66" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0A0A0A">Aa</text><text x="388" y="65" font-family="Inter, system-ui, sans-serif" font-size="7" fill="#6E6E73">Regular · 20/28</text>
+              <line x1="366" y1="82" x2="450" y2="82" stroke="#D2D2D7" stroke-width="2" stroke-linecap="round"></line><line class="x-type" style="--d: .5s;" x1="366" y1="82" x2="414" y2="82" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line><circle cx="414" cy="82" r="4.5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></circle>
+            </g>
+            <path class="e-draw" style="--d: .5s;" pathLength="1" d="M300 312 C322 270 368 330 404 296 S446 262 462 276" fill="none" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round"></path>
+            <g class="x-pop" style="--d: .7s;"><line x1="404" y1="296" x2="382" y2="317" stroke="#0A0A0A" stroke-width=".75"></line><line x1="404" y1="296" x2="426" y2="275" stroke="#0A0A0A" stroke-width=".75"></line><circle cx="382" cy="317" r="2.5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></circle><circle cx="426" cy="275" r="2.5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></circle><rect x="400.5" y="292.5" width="7" height="7" fill="#FEC300" stroke="#0A0A0A" stroke-width=".75"></rect></g>
+            <rect class="x-pop" style="--d: .6s;" x="296.5" y="308.5" width="7" height="7" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></rect>
+            <g class="x-layer" style="--dx: -56px; --dy: 28px; --d: .4s;"><path d="M330 150 L330 170 L335 165 L339 174 L342 172.5 L338 164 L345 164 Z" fill="#0A0A0A" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round"></path><rect x="344" y="168" width="24" height="13" rx="6.5" fill="#FEC300"></rect><text x="356" y="177" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="7" fill="#0A0A0A">DA</text></g>
+          </svg>
+</div></div>
+        <div class="exp-txt">
+          <h3>DA et UI design</h3>
+          <p>La touche française&nbsp;: direction artistique et UI design réalisés par LBA, notre agence partenaire en France, avec ses équipes locales.</p>
+        </div>
+      </article>
+      <article class="card exp-card exp-tech">
+        <div class="exp-top"><p class="exp-tag"><span class="dot dot-ma" aria-hidden="true"></span>LBA Factory, Rabat</p><p class="exp-num" aria-hidden="true">02</p></div>
+        <div class="exp-media"><div class="illu-zoom"><svg class="illu illu-pro" viewBox="0 0 480 340" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+            <defs>
+              <filter id="tech-sh" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0A0A0A" flood-opacity=".08"></feDropShadow><feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#0A0A0A" flood-opacity=".06"></feDropShadow></filter>
+              <pattern id="tech-grid" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#0A0A0A" fill-opacity=".16"></circle></pattern>
+            <radialGradient id="tech-fade" cx="50%" cy="50%" r="60%"><stop offset=".6" stop-color="#FFFFFF"></stop><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"></stop></radialGradient><mask id="tech-m" maskUnits="userSpaceOnUse" x="0" y="0" width="480" height="340"><rect width="480" height="340" fill="url(#tech-fade)"></rect></mask>
+            </defs>
+            <g mask="url(#tech-m)"><rect x="8" y="8" width="464" height="324" rx="16" fill="url(#tech-grid)"></rect>
+            <line x1="0" y1="48" x2="480" y2="48" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="0" y1="288" x2="480" y2="288" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="36" y1="0" x2="36" y2="340" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="340" y1="0" x2="340" y2="340" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line><line x1="444" y1="0" x2="444" y2="340" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line></g>
+            <rect class="x-layer" style="--dx: -16px; --dy: -14px; --d: 0s;" x="36" y="48" width="240" height="180" rx="10" fill="none" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></rect>
+            <rect x="36" y="48" width="240" height="180" rx="10" fill="#FFFFFF" filter="url(#tech-sh)"></rect>
+            <rect class="e-draw" style="--d: 0s;" pathLength="1" x="36" y="48" width="240" height="180" rx="10" fill="none" stroke="#0A0A0A" stroke-width="1.25"></rect>
+            <line x1="36" y1="70" x2="276" y2="70" stroke="#0A0A0A" stroke-width=".75"></line>
+            <circle cx="50" cy="59" r="2.5" fill="none" stroke="#0A0A0A" stroke-width=".75"></circle><circle cx="60" cy="59" r="2.5" fill="none" stroke="#0A0A0A" stroke-width=".75"></circle><circle cx="70" cy="59" r="2.5" fill="none" stroke="#0A0A0A" stroke-width=".75"></circle>
+            <rect x="86" y="53" width="50" height="13" rx="4" fill="#F4F3F1"></rect><text x="111" y="62" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7" fill="#0A0A0A">app.ts</text>
+            <path class="e-draw" style="--d: .25s;" pathLength="1" d="M246 55 L240 59 L246 63 M258 55 L264 59 L258 63 M254 54 L250 64" fill="none" stroke="#0A0A0A" stroke-width="1" stroke-linecap="round"></path>
+            <line x1="62" y1="70" x2="62" y2="228" stroke="#F4F3F1" stroke-width="1"></line>
+            <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="6.5" fill="#A1A1A6" text-anchor="end"><text x="56" y="90">1</text><text x="56" y="106">2</text><text x="56" y="122">3</text><text x="56" y="138">4</text><text x="56" y="154">5</text><text x="56" y="170">6</text><text x="56" y="186">7</text><text x="56" y="202">8</text></g>
+            <rect class="x-type" style="--d: 0s;" x="72" y="85" width="34" height="5" rx="2.5" fill="#0A0A0A"></rect><rect class="x-type" style="--d: .05s;" x="110" y="85" width="62" height="5" rx="2.5" fill="#BDBDBD"></rect>
+            <rect class="x-type" style="--d: .1s;" x="72" y="101" width="26" height="5" rx="2.5" fill="#0A0A0A"></rect><rect class="x-type" style="--d: .15s;" x="102" y="101" width="44" height="5" rx="2.5" fill="#BDBDBD"></rect><rect class="x-type" style="--d: .2s;" x="150" y="101" width="56" height="5" rx="2.5" fill="#FEC300"></rect>
+            <rect class="x-type" style="--d: .25s;" x="84" y="117" width="92" height="5" rx="2.5" fill="#BDBDBD"></rect>
+            <rect class="x-type" style="--d: .3s;" x="96" y="133" width="30" height="5" rx="2.5" fill="#0A0A0A"></rect><rect class="x-type" style="--d: .35s;" x="130" y="133" width="72" height="5" rx="2.5" fill="#BDBDBD"></rect>
+            <rect class="x-type" style="--d: .4s;" x="96" y="149" width="54" height="5" rx="2.5" fill="#FEC300"></rect><rect class="x-type" style="--d: .45s;" x="154" y="149" width="40" height="5" rx="2.5" fill="#BDBDBD"></rect>
+            <rect class="x-type" style="--d: .5s;" x="84" y="165" width="64" height="5" rx="2.5" fill="#BDBDBD"></rect>
+            <rect class="x-type" style="--d: .55s;" x="72" y="181" width="14" height="5" rx="2.5" fill="#0A0A0A"></rect>
+            <rect class="x-type" style="--d: .6s;" x="72" y="197" width="40" height="5" rx="2.5" fill="#0A0A0A"></rect>
+            <rect class="x-blink" x="116" y="194" width="1.5" height="11" fill="#0A0A0A"></rect>
+            <g class="x-layer" style="--dx: 10px; --dy: 12px; --d: .3s;">
+              <rect x="128" y="192" width="196" height="92" rx="10" fill="#0A0A0A" filter="url(#tech-sh)"></rect>
+              <circle cx="141" cy="203" r="2.5" fill="#3A3A3C"></circle><circle cx="151" cy="203" r="2.5" fill="#3A3A3C"></circle><circle cx="161" cy="203" r="2.5" fill="#3A3A3C"></circle>
+              <text x="140" y="228" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" fill="#F5F5F7"><tspan fill="#FEC300">$</tspan> npm run build</text>
+              <rect x="140" y="240" width="160" height="4" rx="2" fill="#3A3A3C"></rect><rect class="x-type" style="--d: .4s;" x="140" y="240" width="160" height="4" rx="2" fill="#FEC300"></rect>
+              <text x="140" y="264" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" fill="#A1A1A6"><tspan fill="#FEC300">✓</tspan> ready in 1.2s</text>
+            </g>
+            <line x1="276" y1="148" x2="340" y2="148" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></line>
+            <circle class="x-stream" style="--sx: 58px; --sy: 0px; --d: 0s;" cx="279" cy="148" r="2.5" fill="#0A0A0A"></circle><circle class="x-stream" style="--sx: 58px; --sy: 0px; --d: .8s;" cx="279" cy="148" r="2.5" fill="#FEC300" stroke="#0A0A0A" stroke-width=".75"></circle><circle class="x-stream" style="--sx: 58px; --sy: 0px; --d: 1.6s;" cx="279" cy="148" r="2.5" fill="#0A0A0A"></circle>
+            <g class="x-down"><polygon points="392,182 444,208 392,234 340,208" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></polygon><polygon points="392,194 420,208 392,222 364,208" fill="none" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></polygon><text x="392" y="210.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="7" fill="#0A0A0A">Données</text></g>
+            <g><polygon points="392,122 444,148 392,174 340,148" fill="#F4F3F1" stroke="#0A0A0A" stroke-width=".75"></polygon><polygon points="392,134 420,148 392,162 364,148" fill="none" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></polygon><text x="392" y="150.5" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="7" fill="#0A0A0A">API</text></g>
+            <g class="x-up"><polygon points="392,62 444,88 392,114 340,88" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></polygon><polygon points="392,74 420,88 392,102 364,88" fill="none" stroke="#0A0A0A" stroke-width=".75" stroke-dasharray="1 3"></polygon><line class="x-grow" style="--d: .1s;" x1="380" y1="92" x2="380" y2="72" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line><line class="x-grow" style="--d: .2s;" x1="392" y1="88" x2="392" y2="54" stroke="#FEC300" stroke-width="3" stroke-linecap="round"></line><line class="x-grow" style="--d: .3s;" x1="404" y1="92" x2="404" y2="66" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"></line></g>
+            <circle cx="340" cy="148" r="2" fill="#0A0A0A"></circle><circle cx="444" cy="148" r="2" fill="#0A0A0A"></circle>
+            <g class="x-pop" style="--d: .7s;"><circle cx="452" cy="40" r="13" fill="#FEC300" stroke="#0A0A0A" stroke-width=".75"></circle><path d="M446 40 L450.5 44.5 L458.5 35.5" fill="none" stroke="#0A0A0A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g>
+            <g class="x-pop" style="--d: .8s;"><rect x="362" y="252" width="62" height="18" rx="9" fill="#FFFFFF" stroke="#0A0A0A" stroke-width=".75"></rect><circle cx="374" cy="261" r="3" fill="#FEC300" stroke="#0A0A0A" stroke-width=".5"></circle><text x="382" y="264" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="7.5" fill="#0A0A0A">200 OK</text></g>
+          </svg>
+</div></div>
+        <div class="exp-txt">
+          <h3>Tech</h3>
+          <p>Architecture, développement front et back-end, maintenance applicative. Méthode agile, livraisons fréquentes.</p>
+        </div>
+      </article>
+    </div>
+    <div class="card stack-band">
+      <h3 class="stack-title">Outils et technologies</h3>
+      <div class="techs stack " role="group" aria-roledescription="carrousel" aria-label="Outils et technologies">
+        <ul class="tech-tiles">
+          <li class=""><button class="tech-tile" type="button" aria-label="Figma" aria-current="true" style="--c: #F24E1E; --fg: #FFFFFF;" data-action="stack-pick" data-index="0"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"></path></svg><span class="tech-letter" aria-hidden="true"></span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">Figma</span></li>
+<li class=""><button class="tech-tile" type="button" aria-label="Claude" aria-current="false" style="--c: #D97757; --fg: #FFFFFF;" data-action="stack-pick" data-index="1"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"></path></svg><span class="tech-letter" aria-hidden="true"></span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">Claude</span></li>
+<li class=""><button class="tech-tile" type="button" aria-label="Adobe" aria-current="false" style="--c: #FA0F00; --fg: #FFFFFF;" data-action="stack-pick" data-index="2"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d=""></path></svg><span class="tech-letter" aria-hidden="true">A</span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">Adobe</span></li>
+<li class="stack-sep"><button class="tech-tile" type="button" aria-label="Drupal" aria-current="false" style="--c: #0678BE; --fg: #FFFFFF;" data-action="stack-pick" data-index="3"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.78 5.113C14.09 3.425 12.48 1.815 11.998 0c-.48 1.815-2.09 3.425-3.778 5.113-2.534 2.53-5.405 5.4-5.405 9.702a9.184 9.185 0 1018.368 0c0-4.303-2.871-7.171-5.405-9.702M6.72 16.954c-.563-.019-2.64-3.6 1.215-7.416l2.55 2.788a.218.218 0 01-.016.325c-.61.625-3.204 3.227-3.527 4.126-.066.186-.164.18-.222.177M12 21.677a3.158 3.158 0 01-3.158-3.159 3.291 3.291 0 01.787-2.087c.57-.696 2.37-2.655 2.37-2.655s1.774 1.988 2.367 2.649a3.09 3.09 0 01.792 2.093A3.158 3.158 0 0112 21.677m6.046-5.123c-.068.15-.223.398-.431.405-.371.014-.411-.177-.686-.583-.604-.892-5.864-6.39-6.848-7.455-.866-.935-.122-1.595.223-1.94C10.736 6.547 12 5.285 12 5.285s3.766 3.574 5.336 6.016c1.57 2.443 1.029 4.556.71 5.253"></path></svg><span class="tech-letter" aria-hidden="true"></span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">Drupal</span></li>
+<li class=""><button class="tech-tile" type="button" aria-label="Symfony" aria-current="false" style="--c: #000000; --fg: #FFFFFF;" data-action="stack-pick" data-index="4"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12c0 6.628-5.372 12-12 12S0 18.628 0 12 5.372 0 12 0s12 5.372 12 12zm-6.753-7.561c-1.22.042-2.283.715-3.075 1.644-.878 1.02-1.461 2.229-1.881 3.461-.753-.614-1.332-1.414-2.539-1.761-.966-.297-2.015-.105-2.813.514-.41.319-.71.757-.861 1.254-.36 1.176.381 2.225.719 2.6l.737.79c.15.154.519.56.339 1.138-.193.631-.951 1.037-1.732.799-.348-.106-.848-.366-.734-.73.045-.15.152-.263.21-.391.052-.11.077-.194.095-.242.141-.465-.053-1.07-.551-1.223-.465-.143-.939-.03-1.125.566-.209.68.117 1.913 1.86 2.449 2.04.628 3.765-.484 4.009-1.932.153-.907-.255-1.582-1.006-2.447l-.612-.677c-.371-.37-.497-1.002-.114-1.485.324-.409.785-.584 1.539-.379 1.103.3 1.594 1.063 2.412 1.68-.338 1.11-.56 2.223-.759 3.222l-.123.746c-.585 3.07-1.033 4.757-2.194 5.726-.234.166-.57.416-1.073.434-.266.005-.352-.176-.355-.257-.006-.184.15-.271.255-.353.154-.083.39-.224.372-.674-.016-.532-.456-.994-1.094-.973-.477.017-1.203.465-1.176 1.286.028.85.819 1.485 2.012 1.444.638-.021 2.062-.281 3.464-1.949 1.633-1.911 2.09-4.101 2.434-5.706l.383-2.116c.213.024.441.042.69.048 2.032.044 3.049-1.01 3.064-1.776.01-.464-.304-.921-.744-.91-.386.009-.718.278-.806.654-.094.428.646.813.068 1.189-.41.266-1.146.452-2.184.3l.188-1.042c.386-1.976.859-4.407 2.661-4.467.132-.007.612.006.623.323.003.105-.022.134-.147.375-.115.155-.174.345-.168.537.017.504.4.836.957.816.743-.023.955-.748.945-1.119-.032-.874-.952-1.424-2.17-1.386z"></path></svg><span class="tech-letter" aria-hidden="true"></span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">Symfony</span></li>
+<li class=""><button class="tech-tile" type="button" aria-label="PrestaShop" aria-current="false" style="--c: #DF0067; --fg: #FFFFFF;" data-action="stack-pick" data-index="5"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.558 1.034C5.174 1.034 0 6.21 0 12.592c0 1.258.201 2.47.574 3.597l.002-.007a12.415 12.415 0 01.53-1.787l.011-.03c.085-.222.179-.442.277-.66l.084-.181c.08-.171.165-.34.253-.507.036-.068.07-.136.108-.203.02-.038.044-.073.064-.11.094-.166.19-.332.29-.493l.075-.114c.125-.195.256-.386.393-.573l.035-.05c.144-.193.295-.38.451-.563l.1-.118c.155-.177.315-.35.481-.517l.099-.097a10.321 10.321 0 01.546-.503c.74-2.48 3.005-4.285 5.686-4.285 1.079 0 2.152.31 3.071.873a6.017 6.017 0 012.211 2.407l.007.015.04.074v.003l.004.002a9.925 9.925 0 011.567 1.198c.04.037.081.071.12.109.002 0 .006.005.007.006l-.002-.006-.001-.004v-.003l.042-.084c.377-2.384 1.43-4.102 2.67-4.102.934 0 1.762.975 2.276 2.476l.005.016.001.002c.145.158.287.331.424.521l.007.01.021.067-.02-.078c-1.542-4.569-5.863-7.857-10.952-7.857zM9.927 5.477C7.586 5.52 5.34 7.132 4.574 9.365l-.012.034a10.14 10.14 0 011.315-.895c2.806-1.656 6.479-1.646 9.278.016-.895-1.653-2.631-2.819-4.5-3.004a5.14 5.14 0 00-.728-.039zm9.834.5a1.36 1.36 0 00-.39.067c-1.265.562-1.719 2.073-2.031 3.303l-.016.072c.365-.62.808-1.215 1.396-1.642.835-.687 2.105-.655 2.916.053.308.326.141.008.031-.22-.342-.75-1.025-1.653-1.906-1.634zM21.67 7.98zm-9.32.335l-1.07 3.27-.002.005-.006.002-4.498 1.112h-.009l4.456 1.087c.105.11.227.205.36.28h.002c.042.024.085.045.129.065l.01.005c.041.018.083.033.126.047l.021.008c.04.013.08.023.12.032l.033.008a1.677 1.677 0 00.318.033 1.546 1.546 0 001.43-.948c.08-.186.123-.39.123-.604v-.011l-.001-.012c-.001-.054-.004-.107-.01-.16l-.001-.002a1.506 1.506 0 00-.026-.153l-.001-.004a1.511 1.511 0 00-.096-.288v-.003a1.521 1.521 0 00-.348-.49v-.003zm3.148.626c.048 1.008.036 2.046-.1 3.057-.17 2.018-1.19 3.798-1.972 5.616l-.03.08-.035.086c1.51-1.522 3.17-3.04 3.969-5.082.383-.636.118-1.342-.115-1.976-.17-.877-1.069-1.278-1.717-1.781zm6.172.572l-.588 2.688a1.764 1.764 0 00-.047.2c-.002.02-.007.04-.01.06a1.76 1.76 0 00-.016.222l-.002.031h.003c0 .628.297 1.136.663 1.137a.41.41 0 00.182-.045l.027-.015a.537.537 0 00.07-.047c.013-.01.024-.022.036-.033a.752.752 0 00.137-.168l.03-.054a1.23 1.23 0 00.052-.108l.017-.04c.02-.053.038-.108.053-.166l.002-.002.001-.003.404-.451-.407-.456v.001l-.02-.063zm-4.381.856c.69 1.716.85 3.707.091 5.43-.49 1.368-1.587 2.463-1.874 3.905.73.115 1.468.176 2.21.186 2.166.029 4.332-.42 6.284-1.365-2.04-2.869-4.121-5.755-6.711-8.156zm-4.948.977a.583.583 0 110 1.166.583.583 0 010-1.166zm9.352.37c.138 0 .249.19.249.426s-.111.426-.249.426c-.137 0-.248-.19-.248-.426 0-.235.11-.426.248-.426zm-4.044.184c-.016.112-.033.209-.05.29l-.006.023c-.01.05-.022.094-.033.128-.48 1.417-1.275 2.52-2.36 3.697-.147.16-.301.32-.459.484a58.883 58.883 0 01-1.196 1.205c-.112.11-.259.261-.425.436-.103.287-.22.61-.318.95-.044-.016-.086-.031-.131-.049-2.108-.815-3.519-1.904-3.519-1.904s1.086 1.414 2.915 2.74c.177.129.351.24.522.339-.075 1.194.452 2.34 2.83 2.682a4.81 4.81 0 001.228.008l-.01-.029a.062.062 0 00-.004-.01s-.167-.133-.379-.377a3.842 3.842 0 01-.584-.897 3.382 3.382 0 01-.266-.862 3.176 3.176 0 01-.006-.972c.017-.12.04-.241.072-.366.093-.374.255-.772.507-1.192l.002-.003.241-.404c1.103-1.86 1.797-3.275 1.506-5.441a8.943 8.943 0 00-.078-.476zm4.668.576zm.013.203l.003.036v.01c0 .013-.003.025-.003.038 0-.014.003-.028.003-.043 0-.014-.002-.026-.003-.04zm-.012.275v.001l-.002.01-.002.014.004-.025zm1.353 5.928c-2.553 1.138-5.44 1.44-8.192 1.007-.14 1.108.384 2.218 1.214 2.93l.012.01c2.703-.433 4.975-2.168 6.966-3.946z"></path></svg><span class="tech-letter" aria-hidden="true"></span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">PrestaShop</span></li>
+<li class=""><button class="tech-tile" type="button" aria-label="Magento" aria-current="false" style="--c: #EE672F; --fg: #FFFFFF;" data-action="stack-pick" data-index="6"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d=""></path></svg><span class="tech-letter" aria-hidden="true">M</span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">Magento</span></li>
+<li class=""><button class="tech-tile" type="button" aria-label="React" aria-current="false" style="--c: #61DAFB; --fg: #0A0A0A;" data-action="stack-pick" data-index="7"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"></path></svg><span class="tech-letter" aria-hidden="true"></span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">React</span></li>
+<li class=""><button class="tech-tile" type="button" aria-label="Angular" aria-current="false" style="--c: #DD0031; --fg: #FFFFFF;" data-action="stack-pick" data-index="8"><svg class="tech-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z"></path></svg><span class="tech-letter" aria-hidden="true"></span><svg class="tech-ring" viewBox="0 0 66 66" aria-hidden="true"><rect x="1.5" y="1.5" width="63" height="63" rx="20" pathLength="1"></rect></svg></button><span class="tool-label" aria-hidden="true">Angular</span></li>
+        </ul>
+        <div class="tech-text"><p class="stack-tag"><span class="dot dot-fr" aria-hidden="true"></span>Design · LBA France</p><p class="tech-desc">Maquettes, prototypes et design systems partagés avec vos équipes.</p></div>
+        <button class="tech-toggle" type="button" aria-label="Mettre en pause le défilement des outils et technologies" data-action="stack-toggle">
+              <svg class="ico-pause" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><line x1="104" y1="96" x2="104" y2="160" stroke="currentColor" stroke-width="16" stroke-linecap="round"></line><line x1="152" y1="96" x2="152" y2="160" stroke="currentColor" stroke-width="16" stroke-linecap="round"></line></svg>
+              <svg class="ico-play" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><path d="M112 96 L160 128 L112 160 Z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"></path></svg>
+            </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Références -->
+  <section id="references" class="sec wrap" aria-labelledby="ref-titre" style="padding-block: 0 var(--s-section); display: flex; flex-direction: column; gap: var(--s-5);">
+    <div class="sec-head sec-head-stack">
+      <h2 id="ref-titre"><span class="h-muted">Références</span> Quelques projets menés</h2>
+    </div>
+    <ul class="cols-3 refs" tabindex="0" aria-label="Références" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-3);">
+      <li class="card">
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2); min-block-size: 200px; box-sizing: border-box;">
+          <p class="meta">Extranet</p>
+          <h3>PSG</h3>
+          <p style="color: var(--text-secondary);">Évolution et maintenance de l’extranet.</p>
+        </div>
+        <div role="img" aria-label="Visuel du projet PSG, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
+      </li>
+      <li class="card">
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2); min-block-size: 200px; box-sizing: border-box;">
+          <p class="meta">Application</p>
+          <h3>Orange</h3>
+          <p style="color: var(--text-secondary);">Application d’animation des communautés.</p>
+        </div>
+        <div role="img" aria-label="Visuel du projet Orange, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
+      </li>
+      <li class="card">
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2); min-block-size: 200px; box-sizing: border-box;">
+          <p class="meta">Type de projet, à fournir</p>
+          <h3>Référence 3, à fournir</h3>
+          <p style="color: var(--text-secondary);">Description du projet, à fournir.</p>
+        </div>
+        <div role="img" aria-label="Visuel de la référence 3, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
+      </li>
+      <li class="card">
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2); min-block-size: 200px; box-sizing: border-box;">
+          <p class="meta">Type de projet, à fournir</p>
+          <h3>Référence 4, à fournir</h3>
+          <p style="color: var(--text-secondary);">Description du projet, à fournir.</p>
+        </div>
+        <div role="img" aria-label="Visuel de la référence 4, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
+      </li>
+      <li class="card">
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2); min-block-size: 200px; box-sizing: border-box;">
+          <p class="meta">Type de projet, à fournir</p>
+          <h3>Référence 5, à fournir</h3>
+          <p style="color: var(--text-secondary);">Description du projet, à fournir.</p>
+        </div>
+        <div role="img" aria-label="Visuel de la référence 5, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
+      </li>
+      <li class="card">
+        <div style="padding: var(--s-4); display: flex; flex-direction: column; gap: var(--s-2); min-block-size: 200px; box-sizing: border-box;">
+          <p class="meta">Type de projet, à fournir</p>
+          <h3>Référence 6, à fournir</h3>
+          <p style="color: var(--text-secondary);">Description du projet, à fournir.</p>
+        </div>
+        <div role="img" aria-label="Visuel de la référence 6, à fournir" style="aspect-ratio: 16 / 10; background: var(--surface-subtle); display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; text-align: center; color: var(--text-secondary);"><span style="padding: 12px 16px; border: 1.5px dashed var(--border-strong); border-radius: 8px;">Logo ou visuel du projet, à fournir avec droit d’usage</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- L'agence -->
+  <section id="agence" class="sec on-dark" aria-labelledby="agence-titre" style="background: var(--surface-inverse); color: var(--text-inverse);">
+    <div class="wrap grid ag-grid" style="padding-block: var(--s-section);">
+      <div class="ag-head">
+        <h2 id="agence-titre"><span class="h-muted">L’agence</span> Basés <span class="hl">à Rabat</span>, adossés à une agence en France</h2>
+        <p class="t-lead" style="color: var(--text-secondary-inverse);">LBA Factory existe depuis 10 ans. Notre équipe travaille avec LBA, agence digitale en France.</p>
+      </div>
+      <figure class="squircle ag-photo" role="region" aria-roledescription="carrousel" aria-label="Photos de l’agence" style="margin: 0; position: relative; background: #2A2A2A;">
+        <div class="parallax-img" style="position: absolute; inset: 0;">
+          <img class="photo slide" data-slide="0" src="/media/equipe-table.webp" srcset="/media/equipe-table-800.webp 800w, /media/equipe-table.webp 1600w" sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1067" decoding="async" loading="lazy" alt="Une équipe travaille autour d’une table dans un espace de travail lumineux." aria-hidden="false" style="opacity: 1; transform: scale(1); object-position: 45% 40%;">
+<img class="photo slide" data-slide="1" src="/media/prise-parole.webp" srcset="/media/prise-parole-800.webp 800w, /media/prise-parole.webp 1600w" sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1067" decoding="async" loading="lazy" alt="Une collaboratrice prend la parole en réunion." aria-hidden="true" style="opacity: 0; transform: scale(1.14); object-position: 70% 35%;">
+<img class="photo slide" data-slide="2" src="/media/devs-ecran.webp" srcset="/media/devs-ecran-800.webp 800w, /media/devs-ecran.webp 1600w" sizes="(max-width: 900px) 100vw, 640px" width="1600" height="1067" decoding="async" loading="lazy" alt="Trois développeurs étudient un écran ensemble." aria-hidden="true" style="opacity: 0; transform: scale(1.14); object-position: 55% 30%;">
+        </div>
+        <div class="pager " data-slider="b" role="group" aria-label="Choisir la photo de l’agence">
+          <button class="pager-dot" type="button" aria-label="Photo 1 sur 3" aria-current="true" data-action="pick" data-index="0"><span><i class="pager-fill"></i></span></button>
+<button class="pager-dot" type="button" aria-label="Photo 2 sur 3" aria-current="false" data-action="pick" data-index="1"><span><i class="pager-fill"></i></span></button>
+<button class="pager-dot" type="button" aria-label="Photo 3 sur 3" aria-current="false" data-action="pick" data-index="2"><span><i class="pager-fill"></i></span></button>
+          <button class="pager-toggle" type="button" aria-label="Mettre en pause le défilement des photos de l’agence" data-action="toggle-auto" data-slider="b">
+            <svg class="ico-pause" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><line x1="104" y1="96" x2="104" y2="160" stroke="currentColor" stroke-width="16" stroke-linecap="round"></line><line x1="152" y1="96" x2="152" y2="160" stroke="currentColor" stroke-width="16" stroke-linecap="round"></line></svg>
+                <svg class="ico-play" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-width="16"></circle><path d="M112 96 L160 128 L112 160 Z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"></path></svg>
+          </button>
+        </div>
+      </figure>
+      <dl class="ag-stats">
+        <div>
+          <dt>Depuis</dt>
+          <dd class="ag-num">2016</dd>
+          <dd class="ag-sub">Création de LBA Factory.</dd>
+        </div>
+        <div>
+          <dt><span class="ag-dot" aria-hidden="true"></span>LBA Factory, Maroc</dt>
+          <dd class="ag-num"><span class="count" data-to="5">5</span> <span class="ag-unit">collaborateurs</span></dd>
+          <dd class="ag-sub">Équipe de développement à Rabat.</dd>
+        </div>
+        <div>
+          <dt><span class="ag-dot ag-dot-fr" aria-hidden="true"></span>LBA, France</dt>
+          <dd class="ag-num"><span class="count" data-to="20">20</span> <span class="ag-unit">collaborateurs</span></dd>
+          <dd class="ag-sub">Agence digitale, direction artistique et UI design.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Nous rejoindre -->
+  <section id="recrutement" class="sec wrap" aria-labelledby="rec-titre" style="padding-block: var(--s-section); display: flex; flex-direction: column; gap: var(--s-5);">
+    <div class="sec-head" style="display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-3);">
+      <h2 id="rec-titre"><span class="h-muted">Nous rejoindre</span> LBA Factory recrute à Rabat.</h2>
+    </div>
+    <ul class="rows" style="border-block: 1px solid var(--border-subtle);">
+      <li class="grid" style="align-items: center; padding-block: 24px;">
+        <h3 style="grid-column: 1 / span 6;">Ingénieur études et développement PHP Symfony confirmé(e) H/F</h3>
+        <p class="meta" style="grid-column: 7 / span 2;">CDI, temps plein</p>
+        <p class="meta" style="grid-column: 9 / span 2;">Rabat, Maroc</p>
+        <div style="grid-column: 11 / span 2; justify-self: end;"><a class="lnk" href="#offre-symfony">Postuler<span class="sr"> : Ingénieur études et développement PHP Symfony confirmé(e)</span><svg class="flip" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
+      </li>
+      <li class="grid" style="align-items: center; padding-block: 24px;">
+        <h3 style="grid-column: 1 / span 6;">Ingénieur études et développement Angular, React confirmé(e) H/F</h3>
+        <p class="meta" style="grid-column: 7 / span 2;">CDI, temps plein</p>
+        <p class="meta" style="grid-column: 9 / span 2;">Rabat, Maroc</p>
+        <div style="grid-column: 11 / span 2; justify-self: end;"><a class="lnk" href="#offre-front">Postuler<span class="sr"> : Ingénieur études et développement Angular, React confirmé(e)</span><svg class="flip" viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5L13 10l-5.5 5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
+      </li>
+    </ul>
+    <div class="grid" style="row-gap: var(--s-3);">
+      <div class="card" style="grid-column: 1 / span 4; padding: var(--s-4); justify-content: space-between; gap: var(--s-3);">
+        <p class="t-h3">Aucune offre ne vous correspond ?</p>
+        <div><a class="btn btn-primary" href="#candidature"><span class="btn-label" data-label="Candidature spontanée">Candidature spontanée</span></a></div>
+      </div>
+      <figure class="squircle" style="grid-column: 5 / span 4; margin: 0; aspect-ratio: 4 / 3;"><img class="photo" src="/media/prise-parole.webp" srcset="/media/prise-parole-800.webp 800w, /media/prise-parole.webp 1600w" sizes="(max-width: 900px) 100vw, 480px" width="1600" height="1067" loading="lazy" decoding="async" alt="Une collaboratrice prend la parole en réunion." style="object-position: 74% 35%;"></figure>
+      <figure class="squircle" style="grid-column: 9 / span 4; margin: 0; aspect-ratio: 4 / 3;"><img class="photo" src="/media/echange-bureau.webp" srcset="/media/echange-bureau-800.webp 800w, /media/echange-bureau.webp 1600w" sizes="(max-width: 900px) 100vw, 480px" width="1600" height="1067" loading="lazy" decoding="async" alt="Une collaboratrice échange avec une collègue à son bureau." style="object-position: 46% 30%;"></figure>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="sec" aria-labelledby="contact-titre" style="background: var(--surface-subtle);">
+    <div class="wrap grid" style="padding-block: var(--s-section);">
+      <div style="grid-column: 1 / span 5; display: flex; flex-direction: column; gap: var(--s-3);">
+        <h2 id="contact-titre"><span class="h-muted">Contact</span> Parlons de <span class="hl">votre projet</span></h2>
+        <p class="t-lead" style="max-width: 30ch;">Décrivez-nous votre besoin&nbsp;: nous revenons vers vous.</p>
+        <dl style="display: flex; flex-direction: column; gap: 10px; margin-block-start: 16px;">
+          <div style="display: flex; gap: 8px;"><dt style="color: var(--text-secondary); min-inline-size: 88px;">Adresse</dt><dd><span class="todo">à fournir</span></dd></div>
+          <div style="display: flex; gap: 8px;"><dt style="color: var(--text-secondary); min-inline-size: 88px;">E-mail</dt><dd><span class="todo">à fournir</span></dd></div>
+          <div style="display: flex; gap: 8px;"><dt style="color: var(--text-secondary); min-inline-size: 88px;">Téléphone</dt><dd><span class="todo">à fournir</span></dd></div>
+        </dl>
+        <figure class="map" style="margin: 0; margin-block-start: 24px;">
+          <svg class="map-svg" viewBox="0 0 345 304" role="img" aria-label="Plan au trait schématique de Rabat, point au centre-ville, adresse à fournir">
+            <line x1="3.7" y1="0" x2="3.7" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="40.6" y1="0" x2="40.6" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="77.6" y1="0" x2="77.6" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="114.6" y1="0" x2="114.6" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="151.5" y1="0" x2="151.5" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="188.5" y1="0" x2="188.5" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="225.4" y1="0" x2="225.4" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="262.4" y1="0" x2="262.4" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="299.4" y1="0" x2="299.4" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="336.3" y1="0" x2="336.3" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="373.3" y1="0" x2="373.3" y2="304" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="15.8" x2="345" y2="15.8" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="51.8" x2="345" y2="51.8" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="87.7" x2="345" y2="87.7" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="123.6" x2="345" y2="123.6" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="159.5" x2="345" y2="159.5" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="195.5" x2="345" y2="195.5" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="231.4" x2="345" y2="231.4" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="267.3" x2="345" y2="267.3" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line><line x1="0" y1="303.3" x2="345" y2="303.3" stroke="#0A0A0A" stroke-width=".5" stroke-dasharray="1 4"></line>
+            <path d="M356.0 -25.6 L356.0 -11.8 L306.8 24.1 L262.4 57.3 L218.0 84.9 L188.5 98.7 L166.3 104.3 L149.1 115.3 L126.9 129.1 L99.8 148.5 L72.7 170.6 L48.0 195.5 L23.4 223.1 L3.7 236.9 L3.7 333.7 L410.2 333.7 L410.2 -25.6 Z" fill="#FFFFFF" stroke="none"></path>
+            <path d="M177.4 100.1 L195.9 112.6 L213.1 129.1 L230.4 148.5 L245.2 170.6 L259.9 195.5 L269.8 223.1 L282.1 264.6 L296.9 319.9" stroke="#0A0A0A" stroke-width="9" stroke-linecap="butt" fill="none"></path>
+            <path d="M177.4 100.1 L195.9 112.6 L213.1 129.1 L230.4 148.5 L245.2 170.6 L259.9 195.5 L269.8 223.1 L282.1 264.6 L296.9 319.9" stroke="#FDFCFC" stroke-width="7.4" stroke-linecap="butt" fill="none"></path>
+            <path class="map-draw" pathLength="1" d="M356.0 -11.8 L306.8 24.1 L262.4 57.3 L218.0 84.9 L188.5 98.7" stroke="#0A0A0A" stroke-width="1" fill="none"></path>
+            <path class="map-draw" pathLength="1" d="M166.3 104.3 L149.1 115.3 L126.9 129.1 L99.8 148.5 L72.7 170.6 L48.0 195.5 L23.4 223.1 L3.7 236.9" stroke="#0A0A0A" stroke-width="1" fill="none" style="--d: .2s;"></path>
+            <path d="M166.3 104.3 L151.5 109.8 L141.7 126.4 L149.1 134.7 L183.6 134.7 L190.9 120.9 L181.1 107.0 Z" stroke="#0A0A0A" stroke-width=".7" stroke-dasharray="2 2.5" fill="none"></path>
+            <path class="map-draw" pathLength="1" d="M173.7 123.6 L171.2 143.0 L166.3 162.3 L158.9 184.4" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.50s;"></path><path class="map-draw" pathLength="1" d="M119.5 134.7 L151.5 137.4 L181.1 137.4 L208.2 134.7" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.62s;"></path><path class="map-draw" pathLength="1" d="M158.9 184.4 L144.1 206.5 L124.4 231.4 L109.6 261.8" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.74s;"></path><path class="map-draw" pathLength="1" d="M158.9 184.4 L188.5 201.0 L225.4 223.1 L242.7 256.3" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.86s;"></path><path class="map-draw" pathLength="1" d="M99.8 148.5 L126.9 173.4 L144.1 201.0" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 0.98s;"></path><path class="map-draw" pathLength="1" d="M232.8 84.9 L262.4 57.3 L299.4 68.3 L324.0 98.7" stroke="#0A0A0A" stroke-width=".8" fill="none" style="--d: 1.10s;"></path>
+            <text x="20.9" y="181.7" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6B675F" font-style="normal" transform="rotate(-38 20.9 181.7)">Océan Atlantique</text>
+            <text x="282.1" y="51.8" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#6B675F">Salé</text>
+            <text x="277.2" y="187.2" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6B675F" transform="rotate(70 269.8 187.2)">Bouregreg</text>
+            <text x="138.0" y="100.1" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6B675F">Médina</text>
+            <text x="85.0" y="245.2" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6B675F">Agdal</text>
+            <text x="232.8" y="242.5" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#6B675F">Hay Riad</text>
+            <circle class="map-ripple" cx="172.2" cy="151.8" r="6" fill="none" stroke="#FEC300" stroke-width="1.5"></circle>
+            <circle cx="172.2" cy="151.8" r="4.5" fill="#FEC300" stroke="#0A0A0A" stroke-width="1"></circle>
+            <text x="182.2" y="155.8" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#0A0A0A">Rabat</text>
+          </svg>
+        </figure>
+      </div>
+      <form class="card" action="/api/contact" method="post" data-contact style="grid-column: 7 / span 6; padding: var(--s-5); gap: var(--s-3);" novalidate>
+        <div class="form-row" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-3);">
+          <div class="field"><label for="nom">Nom</label><input class="input" id="nom" name="nom" type="text" autocomplete="family-name"></div>
+          <div class="field"><label for="prenom">Prénom</label><input class="input" id="prenom" name="prenom" type="text" autocomplete="given-name"></div>
+        </div>
+        <div class="form-row" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--s-3);">
+          <div class="field"><label for="email">E-mail</label><input class="input" id="email" name="email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="tel">Téléphone</label><input class="input" id="tel" name="tel" type="tel" autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="societe">Société</label><input class="input" id="societe" name="societe" type="text" autocomplete="organization"></div>
+        <div class="field">
+          <label for="sujet">Sujet</label>
+          <div class="select-wrap">
+            <select class="input" id="sujet" name="sujet"><option value="">Choisir un sujet</option></select>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+        </div>
+        <div class="field"><label for="message">Message</label><textarea class="input" id="message" name="message" rows="5"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="site-web">Ne pas remplir</label><input id="site-web" name="site_web" type="text" tabindex="-1" autocomplete="off"></div>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <div><button class="btn btn-primary" type="submit"><span class="btn-label" data-label="Envoyer votre message">Envoyer votre message</span></button></div>
+        <p class="meta">Mention loi 09-08 et numéro CNDP&nbsp;: <span class="todo">à reprendre du site actuel</span></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="foot-ed" style="background: var(--surface-inverse); color: var(--text-inverse);">
+    <div class="wrap foot-inner">
+      <div class="foot-top">
+        
+        
+      </div>
+      <nav class="foot-nav" aria-label="Plan du site">
+        <ul>
+          
+          
+          
+          
+          
+          
+        </ul>
+      </nav>
+      <div class="foot-mark-wrap"><svg class="foot-logo" viewBox="0 0 330 63" width="330" height="63" role="img" aria-label="LBA Factory"><g fill="#0A0A0A">
+    <g data-g="l"><path d="M12 40.5842H30.9004V51.2639H0V8.54419H12V40.5842Z"/></g>
+    <g data-g="b"><path d="M53.9521 8.54419C59.1119 8.54425 62.8915 9.56442 65.2314 11.6643C67.5714 13.7643 68.7119 16.3445 68.7119 19.4045C68.7118 23.5443 66.6716 26.724 63.1318 28.344C67.6318 29.964 70.4521 34.2843 70.4521 38.6643C70.4521 46.5242 65.2318 51.2638 54.3721 51.2639H32.7119V8.54419H53.9521ZM44.7119 41.844H53.7119C56.5916 41.8439 58.0311 40.5243 58.0312 37.9446C58.0312 35.3646 56.5918 34.0442 53.7119 34.0442H44.7119V41.844ZM44.7119 25.2239H53.4717C57.7917 25.2239 57.7917 17.9045 53.4717 17.9045H44.7119V25.2239Z"/></g>
+    <g data-g="A"><path d="M107.428 33.4436L101.161 50.9417L99.4658 45.6838H82.7256L80.9258 51.2639H68.6855L83.8662 8.54419H98.2656L107.428 33.4436ZM91.0059 19.1643C90.1059 22.2242 89.4458 24.4446 88.9658 25.9446L85.8457 35.7844H96.2256L93.0459 25.9446C92.1459 23.1246 91.4259 20.9043 91.0059 19.1643Z"/></g>
+    <g data-g="slash"><path d="M112.134 59.808H103.986L125.406 0H133.554L112.134 59.808ZM113.986 51.2639H109.193L111.557 44.6633L113.986 51.2639Z"/></g>
+    <g data-g="f"><path d="M155.994 13.364C154.134 13.364 151.674 14.204 151.674 17.804V21.644H158.454V27.704H151.674V50.864H144.654V27.704H139.554V21.644H144.654V17.624C144.654 11.084 148.854 7.12402 154.854 7.12402C156.594 7.12402 158.034 7.48402 158.514 7.72402V13.664C158.094 13.544 157.314 13.364 155.994 13.364Z"/></g>
+    <g data-g="a"><path d="M160.391 42.944C160.391 37.724 164.231 34.844 169.211 34.124L176.711 32.984C178.391 32.744 178.871 31.904 178.871 30.884C178.871 28.424 177.191 26.444 173.351 26.444C169.691 26.444 167.651 28.784 167.351 31.724L160.991 30.284C161.531 25.244 166.091 20.744 173.291 20.744C182.291 20.744 185.711 25.844 185.711 31.664V46.184C185.711 48.824 186.011 50.564 186.071 50.864H179.591C179.531 50.684 179.291 49.484 179.291 47.144C177.911 49.364 175.031 51.764 170.291 51.764C164.171 51.764 160.391 47.564 160.391 42.944ZM171.611 46.304C175.511 46.304 178.871 44.444 178.871 38.744V37.424L171.251 38.564C169.091 38.924 167.351 40.124 167.351 42.524C167.351 44.504 168.851 46.304 171.611 46.304Z"/></g>
+    <g data-g="c"><path d="M205.465 27.164C201.205 27.164 197.425 30.344 197.425 36.224C197.425 42.104 201.205 45.404 205.585 45.404C210.145 45.404 212.245 42.224 212.905 40.004L219.025 42.224C217.645 46.784 213.265 51.764 205.585 51.764C197.005 51.764 190.465 45.104 190.465 36.224C190.465 27.224 197.005 20.744 205.405 20.744C213.265 20.744 217.585 25.664 218.785 30.344L212.545 32.624C211.885 30.044 209.905 27.164 205.465 27.164Z"/></g>
+    <g data-g="t"><path d="M232.634 12.704V21.644H238.694V27.824H232.634V41.384C232.634 43.964 233.774 45.044 236.354 45.044C237.314 45.044 238.454 44.864 238.754 44.804V50.564C238.334 50.744 237.014 51.224 234.494 51.224C229.094 51.224 225.734 47.984 225.734 42.524V27.824H220.334V21.644H221.834C224.954 21.644 226.334 19.664 226.334 17.084V12.704H232.634Z"/></g>
+    <g data-g="o"><path d="M256.594 45.524C260.914 45.524 264.754 42.344 264.754 36.224C264.754 30.164 260.914 27.044 256.594 27.044C252.334 27.044 248.434 30.164 248.434 36.224C248.434 42.284 252.334 45.524 256.594 45.524ZM256.594 20.744C265.354 20.744 271.774 27.284 271.774 36.224C271.774 45.224 265.354 51.764 256.594 51.764C247.894 51.764 241.474 45.224 241.474 36.224C241.474 27.284 247.894 20.744 256.594 20.744Z"/></g>
+    <g data-g="r"><path d="M293.849 21.464V28.544C293.069 28.424 292.289 28.364 291.569 28.364C286.169 28.364 283.709 31.484 283.709 36.944V50.864H276.749V21.644H283.529V26.324C284.909 23.144 288.149 21.284 291.989 21.284C292.829 21.284 293.549 21.404 293.849 21.464Z"/></g>
+    <g data-g="y"><path d="M307.046 62.684H299.606L306.626 47.384L294.146 21.644H302.006L310.406 40.124L318.266 21.644H325.646L307.046 62.684Z"/></g>
+  </g>
+  <g data-g="dot"><circle cx="324.8" cy="46.33" r="4.9" fill="#FEC300"/></g></svg></div>
+      <div class="foot">
+        <p style="color: var(--text-secondary-inverse);">© LBA Factory, Rabat</p>
+        <a class="lnk" href="#mentions-legales">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
+</div>
     <script>
       import '../scripts/main.js';
     </script>
