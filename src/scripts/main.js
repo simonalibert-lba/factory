@@ -513,7 +513,7 @@ class App {
     show(root.querySelectorAll('footer .foot > *'), { y: 10, stagger: 0.08, scrollTrigger: onEnter(root.querySelector('footer'), 'top 95%') });
     if (!reduce) {
       const img = root.querySelector('.parallax-img');
-      if (img) g.fromTo(img, { yPercent: -5, scale: 1.12 }, { yPercent: 5, scale: 1.12, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
+      if (img) g.fromTo(img, { yPercent: -2, scale: 1.04 }, { yPercent: 2, scale: 1.04, ease: 'none', scrollTrigger: { trigger: img.parentElement, start: 'top bottom', end: 'bottom top', scrub: true } });
       root.querySelectorAll('.count').forEach((el) => {
         const node = el.firstChild; const to = parseInt(el.getAttribute('data-to'), 10) || 0; const o = { v: 0 };
         node.nodeValue = '0';
