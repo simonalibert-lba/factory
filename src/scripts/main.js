@@ -36,7 +36,7 @@ class App {
       sk.classList.toggle('is-paused', !!st.stackPaused);
       sk.querySelectorAll('.tech-tile').forEach((b) => b.setAttribute('aria-current', Number(b.dataset.index) === si ? 'true' : 'false'));
       sk.querySelector('.tech-desc').textContent = STACK[si].desc;
-      const tg = sk.querySelector('.stack-tag'); tg.lastChild.textContent = STACK[si].fam === 'design' ? 'Design · LBA France' : 'Tech · Rabat'; tg.querySelector('.dot').className = 'dot ' + (STACK[si].fam === 'design' ? 'dot-fr' : 'dot-ma');
+      const tg = sk.querySelector('.stack-tag'); if (tg) tg.lastChild.textContent = STACK[si].fam === 'design' ? 'Design · LBA France' : 'Tech · Rabat'; if (tg) tg.querySelector('.dot').className = 'dot ' + (STACK[si].fam === 'design' ? 'dot-fr' : 'dot-ma');
     }
     const sliders = { a: { idx: st.slide, paused: st.autoPaused }, b: { idx: st.slideB, paused: st.autoPausedB } };
     this.root.querySelectorAll('.pager[data-slider]').forEach((pager) => {
